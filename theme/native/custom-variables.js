@@ -647,7 +647,9 @@ export const radioButtons = {
 //
 // Background gradient style
 export const backgroundGradient = {
-    container: {}
+    container: {},
+    angle: 0,
+    opacity: 100
 };
 // column chart styles
 export const columnChart = {
