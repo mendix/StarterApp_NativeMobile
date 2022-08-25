@@ -52,6 +52,12 @@ public final class ConfigurationManager {
         );
     }
 
+    public String getOpenIDPrefix() {
+        return loadValueFromEnvOrDefault(
+                "MendixSSO_OpenIDPrefix",
+                "https://mxid2.mendixcloud.com/mxid2/");
+    }
+
     public String getIndexPage() {
 
         return OpenIDUtils.ensureStartsWithSlash(

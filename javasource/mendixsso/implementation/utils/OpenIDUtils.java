@@ -6,6 +6,7 @@ import com.mendix.m2ee.api.IMxRuntimeRequest;
 import com.mendix.m2ee.api.IMxRuntimeResponse;
 import com.mendix.systemwideinterfaces.MendixRuntimeException;
 import com.mendix.systemwideinterfaces.core.ISession;
+import mendixsso.implementation.ConfigurationManager;
 import mendixsso.implementation.handlers.OpenIDHandler;
 import mendixsso.proxies.constants.Constants;
 
@@ -22,7 +23,7 @@ import java.util.regex.Pattern;
 import static mendixsso.implementation.handlers.OpenIDHandler.CALLBACK;
 import static mendixsso.implementation.handlers.OpenIDHandler.OPENID_CLIENTSERVLET_LOCATION;
 
-public class OpenIDUtils {
+public final class OpenIDUtils {
 
     private OpenIDUtils() {
     }
@@ -35,34 +36,40 @@ public class OpenIDUtils {
     private static final String NUM = "0123456789";
     private static final String SPL_CHARS = "!@#$%^&*_=+-/";
 
-    private static final ILogNode LOG = Core.getLogger(Constants.getLogNode());
     private static final Pattern OPENID_UUID_REGEX = Pattern.compile("mxid2/id\\?id=(\\p{XDigit}{8}-\\p{XDigit}{4}-\\p{XDigit}{4}-\\p{XDigit}{4}-\\p{XDigit}{12})$");
+
+    private static final ILogNode LOG = Core.getLogger(Constants.getLogNode());
 
     public static String getApplicationUrl(final IMxRuntimeRequest req) {
         final String serverName = req.getHttpServletRequest().getServerName();
         if (serverName == null) {
-            LOG.warn("Something went wrong while determining the server name from the request, defaulting to the application root URL.");
+            LOG.warn("Something went wrong while determining the server name from the request," + " defaulting to the application root URL.");
             return getDefaultAppRootUrl();
         }
 
         try {
-            // Because the Mendix Cloud load balancers terminate SSL connections, it is not possible to determine
-            // the original request scheme (whether it is http or https). Therefore we assume https for all connections
+            // Because the Mendix Cloud load balancers terminate SSL connections, it is not possible to
+            // determine
+            // the original request scheme (whether it is http or https). Therefore we assume https for
+            // all connections
             // except localhost (to enable local development).
             final String scheme = serverName.toLowerCase().endsWith(".test") || "localhost".equalsIgnoreCase(serverName) ? HTTP : HTTPS;
             final int serverPort = req.getHttpServletRequest().getServerPort();
             // Ports 80 and 443 should be avoided, as they are the default, therefore we pass in -1
-            final URI appUri = new URI(scheme, null, serverName, serverPort == 80 || serverPort == 443 ? -1 : serverPort,
-                    "/", null, null);
+            final URI appUri = new URI(scheme, null, serverName, serverPort == 80 || serverPort == 443 ? -1 : serverPort, "/", null, null);
             return appUri.toString();
         } catch (URISyntaxException e) {
-            LOG.warn("Something went wrong while constructing the application URL, defaulting to the application root URL.", e);
+            LOG.warn("Something went wrong while constructing the application URL," + " defaulting to the application root URL.", e);
             return getDefaultAppRootUrl();
         }
     }
 
     private static String getDefaultAppRootUrl() {
         return ensureEndsWithSlash(Core.getConfiguration().getApplicationRootUrl());
+    }
+
+    public static String getOpenID(String uuid) {
+        return ensureEndsWithSlash(ConfigurationManager.getInstance().getOpenIDPrefix()) + "id?id=" + uuid;
     }
 
     public static String extractUUID(final String openID) {
@@ -82,10 +89,10 @@ public class OpenIDUtils {
     public static void redirectToIndex(final IMxRuntimeRequest req, final IMxRuntimeResponse resp, final String continuation) {
         resp.setStatus(IMxRuntimeResponse.SEE_OTHER);
 
-        //no continuation provided, use index
-        if (continuation == null)
+        // no continuation provided, use index
+        if (continuation == null) {
             resp.addHeader(LOCATION_HEADER_NAME, OpenIDHandler.INDEX_PAGE);
-        else {
+        } else {
             if (continuation.trim().startsWith("javascript:")) {
                 throw new IllegalArgumentException("Javascript injection detected!");
             } else if (!continuation.startsWith("http://") && !continuation.startsWith("https://")) {
@@ -102,20 +109,20 @@ public class OpenIDUtils {
 
     public static String getFingerPrint(final IMxRuntimeRequest req) {
         final String agent = req.getHeader("User-Agent");
-        if (agent != null)
+        if (agent != null) {
             return base64Encode(agent.getBytes());
-
+        }
         return "";
     }
 
     public static String getFingerPrint(final ISession session) {
         final String agent = session.getUserAgent();
-        if (agent != null)
+        if (agent != null) {
             return base64Encode(agent.getBytes());
-
+        }
         return "";
-
     }
+
     public static String ensureStartsWithSlash(final String text) {
         return text.startsWith("/") ? text : "/" + text;
     }
@@ -124,13 +131,13 @@ public class OpenIDUtils {
         return text.endsWith("/") ? text : text + "/";
     }
 
-    public static String randomStrongPassword(final int minLen, final int maxLen, final int noOfCAPSAlpha,
-                                              final int noOfDigits, final int noOfSplChars) {
-        if (minLen > maxLen)
+    public static String randomStrongPassword(final int minLen, final int maxLen, final int noOfCAPSAlpha, final int noOfDigits, final int noOfSplChars) {
+        if (minLen > maxLen) {
             throw new IllegalArgumentException("Min. Length > Max. Length!");
-        if ((noOfCAPSAlpha + noOfDigits + noOfSplChars) > minLen)
-            throw new IllegalArgumentException
-                    ("Min. Length should be at least sum of (CAPS, DIGITS, SPL CHARS) Length!");
+        }
+        if ((noOfCAPSAlpha + noOfDigits + noOfSplChars) > minLen) {
+            throw new IllegalArgumentException("Min. Length should be at least sum of (CAPS, DIGITS, SPL CHARS) Length!");
+        }
 
         final SecureRandom secureRandom = getStrongSecureRandom();
         final int len = secureRandom.nextInt(maxLen - minLen + 1) + minLen;
