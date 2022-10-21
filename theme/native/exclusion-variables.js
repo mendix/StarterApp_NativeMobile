@@ -1,6 +1,9 @@
 // == Variables to exclude files
 // ## Reduce the amount of files imported from the Atlas_Core module
 // -------------------------------------------------------------------------------------------------------------------//
+// Accordion
+export const excludeAccordion = false;
+export const excludeAccordionHelpers = false;
 // Activity Indicator
 export const excludeActivityIndicator = false;
 export const excludeActivityIndicatorHelpers = false;
@@ -58,6 +61,8 @@ export const excludeMaps = false;
 export const excludeMapsHelpers = false;
 // Page Title
 export const excludePageTitle = false;
+// Pie Doughnut Chart
+export const excludePieDoughnutChart = false;
 // Progress Bar
 export const excludeProgressBar = false;
 export const excludeProgressBarHelpers = false;
@@ -80,6 +85,9 @@ export const excludeSafeAreaView = false;
 // Slider
 export const excludeSlider = false;
 export const excludeSliderHelpers = false;
+// Switch
+export const excludeSwitch = false;
+export const excludeSwitchHelpers = false;
 // Tab Container
 export const excludeTabContainer = false;
 export const excludeTabContainerHelpers = false;
@@ -99,3 +107,12 @@ export const excludeVideoPlayer = false;
 export const excludeWebView = false;
 // Helper Classes
 export const excludeHelpers = false;
+// Radio Buttons
+export const excludeRadioButtons = false;
+export const excludeRadioButtonsHelper = false;
+// Background Gradient
+export const excludeBackgroundGradient = false;
+export const excludeBackgroundGradientHelper = false;
+// Column Chart
+export const excludeColumnChart = false;
+export const excludeColumnChartHelper = false;
