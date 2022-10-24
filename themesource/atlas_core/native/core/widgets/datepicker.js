@@ -22,11 +22,6 @@ export const DatePicker = {
         // All ViewStyle properties are allowed
         ...TextBox.containerDisabled
     },
-    valueContainerError: {
-        // autoCapitalize, placeholderTextColor, selectionColor, underlineColorAndroid and all TextStyle properties are allowed
-        color: input.inputError.color,
-        borderColor: input.inputError.borderColor
-    },
     label: {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label
