@@ -15,25 +15,27 @@ function sleep(time) {
 async function initializeCounter() {
     currentCounter = JSON.parse((await getItem(COUNTER_STORE)) || "-1");
 }
-async function getItem(key) {
+function getItem(key) {
     if (navigator && navigator.product === "ReactNative") {
-        const AsyncStorage = (await import('@react-native-community/async-storage')).default;
+        const AsyncStorage = require("@react-native-community/async-storage").default;
         return AsyncStorage.getItem(key);
     }
     if (window) {
-        return window.localStorage.getItem(key);
+        const value = window.localStorage.getItem(key);
+        return Promise.resolve(value);
     }
-    throw new Error("No storage API available");
+    return Promise.reject(new Error("No storage API available"));
 }
-async function setItem(key, value) {
+function setItem(key, value) {
     if (navigator && navigator.product === "ReactNative") {
-        const AsyncStorage = (await import('@react-native-community/async-storage')).default;
+        const AsyncStorage = require("@react-native-community/async-storage").default;
         return AsyncStorage.setItem(key, value);
     }
     if (window) {
-        return window.localStorage.setItem(key, value);
+        window.localStorage.setItem(key, value);
+        return Promise.resolve();
     }
-    throw new Error("No storage API available");
+    return Promise.reject(new Error("No storage API available"));
 }
 // END EXTRA CODE
 /**
