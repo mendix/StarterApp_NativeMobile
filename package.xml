@@ -1133,7 +1133,6 @@
 			<file path="themesource\nativemobileresources\.version"/>
 			<file path="themesource\nativemobileresources\web\design-properties.json"/>
 			<file path="themesource\nativemobileresources\web\main.scss"/>
-			<file path="theme\web\atlasui-theme-files.zip"/>
 			<file path="theme\web\custom-variables.scss"/>
 			<file path="theme\web\exclusion-variables.scss"/>
 			<file path="theme\web\login.html"/>
