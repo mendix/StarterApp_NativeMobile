@@ -3215,6 +3215,7 @@
 			<file path="themesource\atlas_nativemobile_content\native\pagetemplates\inspectiondetails.js"/>
 			<file path="themesource\atlas_nativemobile_content\native\pagetemplates\maps.js"/>
 			<file path="themesource\atlas_nativemobile_content\native\pagetemplates\signinsignup.js"/>
+			<file path="themesource\atlas_nativemobile_content\.version"/>
 			<file path="themesource\atlas_web_content\.version"/>
 			<file path="themesource\atlas_web_content\web\buildingblocks\_alert.scss"/>
 			<file path="themesource\atlas_web_content\web\buildingblocks\_breadcrumb.scss"/>
