@@ -36,7 +36,7 @@ public class UserManager {
                     String.format(
                             "Authorizing the user with UUID '%s' has failed. Triggering rollback.",
                             uuid));
-            c.rollbackTransAction();
+            c.rollbackTransaction();
             throw e;
         }
     }
@@ -74,7 +74,7 @@ public class UserManager {
                     String.format(
                             "Find or create user for UUID '%s' caught exception. Triggering rollback.",
                             uuid));
-            c.rollbackTransAction();
+            c.rollbackTransaction();
             throw e;
         }
     }
