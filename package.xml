@@ -3194,14 +3194,7 @@
 			<file path="themesource\atlas_core\native\main.js"/>
 			<file path="themesource\atlas_core\native\variables.js"/>
 			<file path="themesource\atlas_core\public\resources\arrow.svg"/>
-			<file path="themesource\atlas_core\public\resources\fonts\LICENSE.txt"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-BoldItalic.woff"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-Bold.woff"/>
-			<file path="themesource\atlas_core\public\resources\fonts\open-sans.css"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-Italic.woff"/>
 			<file path="themesource\atlas_core\public\resources\fonts\open-sans\LICENSE.txt"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-LightItalic.woff"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-Light.woff"/>
 			<file path="themesource\atlas_core\public\resources\fonts\open-sans\OpenSans-BoldItalic.woff"/>
 			<file path="themesource\atlas_core\public\resources\fonts\open-sans\OpenSans-Bold.woff"/>
 			<file path="themesource\atlas_core\public\resources\fonts\open-sans\open-sans.css"/>
@@ -3211,9 +3204,6 @@
 			<file path="themesource\atlas_core\public\resources\fonts\open-sans\OpenSans-Regular.woff"/>
 			<file path="themesource\atlas_core\public\resources\fonts\open-sans\OpenSans-SemiBoldItalic.woff"/>
 			<file path="themesource\atlas_core\public\resources\fonts\open-sans\OpenSans-SemiBold.woff"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-Regular.woff"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-SemiBoldItalic.woff"/>
-			<file path="themesource\atlas_core\public\resources\fonts\OpenSans-SemiBold.woff"/>
 			<file path="themesource\atlas_core\public\resources\glyphicons-halflings-regular.woff"/>
 			<file path="themesource\atlas_core\public\resources\glyphicons-halflings-regular.woff2"/>
 			<file path="themesource\atlas_core\public\resources\menubar-more-icon.png"/>
