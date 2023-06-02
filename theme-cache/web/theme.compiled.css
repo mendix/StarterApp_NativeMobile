@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("resources/fonts/open-sans/open-sans.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -369,831 +369,831 @@ h3 {
 }
 
 .glyphicon-glass:before {
-  content: "\e001";
+  content: "";
 }
 
 .glyphicon-music:before {
-  content: "\e002";
+  content: "";
 }
 
 .glyphicon-search:before {
-  content: "\e003";
+  content: "";
 }
 
 .glyphicon-heart:before {
-  content: "\e005";
+  content: "";
 }
 
 .glyphicon-star:before {
-  content: "\e006";
+  content: "";
 }
 
 .glyphicon-star-empty:before {
-  content: "\e007";
+  content: "";
 }
 
 .glyphicon-user:before {
-  content: "\e008";
+  content: "";
 }
 
 .glyphicon-film:before {
-  content: "\e009";
+  content: "";
 }
 
 .glyphicon-th-large:before {
-  content: "\e010";
+  content: "";
 }
 
 .glyphicon-th:before {
-  content: "\e011";
+  content: "";
 }
 
 .glyphicon-th-list:before {
-  content: "\e012";
+  content: "";
 }
 
 .glyphicon-ok:before {
-  content: "\e013";
+  content: "";
 }
 
 .glyphicon-remove:before {
-  content: "\e014";
+  content: "";
 }
 
 .glyphicon-zoom-in:before {
-  content: "\e015";
+  content: "";
 }
 
 .glyphicon-zoom-out:before {
-  content: "\e016";
+  content: "";
 }
 
 .glyphicon-off:before {
-  content: "\e017";
+  content: "";
 }
 
 .glyphicon-signal:before {
-  content: "\e018";
+  content: "";
 }
 
 .glyphicon-cog:before {
-  content: "\e019";
+  content: "";
 }
 
 .glyphicon-trash:before {
-  content: "\e020";
+  content: "";
 }
 
 .glyphicon-home:before {
-  content: "\e021";
+  content: "";
 }
 
 .glyphicon-file:before {
-  content: "\e022";
+  content: "";
 }
 
 .glyphicon-time:before {
-  content: "\e023";
+  content: "";
 }
 
 .glyphicon-road:before {
-  content: "\e024";
+  content: "";
 }
 
 .glyphicon-download-alt:before {
-  content: "\e025";
+  content: "";
 }
 
 .glyphicon-download:before {
-  content: "\e026";
+  content: "";
 }
 
 .glyphicon-upload:before {
-  content: "\e027";
+  content: "";
 }
 
 .glyphicon-inbox:before {
-  content: "\e028";
+  content: "";
 }
 
 .glyphicon-play-circle:before {
-  content: "\e029";
+  content: "";
 }
 
 .glyphicon-repeat:before {
-  content: "\e030";
+  content: "";
 }
 
 .glyphicon-refresh:before {
-  content: "\e031";
+  content: "";
 }
 
 .glyphicon-list-alt:before {
-  content: "\e032";
+  content: "";
 }
 
 .glyphicon-lock:before {
-  content: "\e033";
+  content: "";
 }
 
 .glyphicon-flag:before {
-  content: "\e034";
+  content: "";
 }
 
 .glyphicon-headphones:before {
-  content: "\e035";
+  content: "";
 }
 
 .glyphicon-volume-off:before {
-  content: "\e036";
+  content: "";
 }
 
 .glyphicon-volume-down:before {
-  content: "\e037";
+  content: "";
 }
 
 .glyphicon-volume-up:before {
-  content: "\e038";
+  content: "";
 }
 
 .glyphicon-qrcode:before {
-  content: "\e039";
+  content: "";
 }
 
 .glyphicon-barcode:before {
-  content: "\e040";
+  content: "";
 }
 
 .glyphicon-tag:before {
-  content: "\e041";
+  content: "";
 }
 
 .glyphicon-tags:before {
-  content: "\e042";
+  content: "";
 }
 
 .glyphicon-book:before {
-  content: "\e043";
+  content: "";
 }
 
 .glyphicon-bookmark:before {
-  content: "\e044";
+  content: "";
 }
 
 .glyphicon-print:before {
-  content: "\e045";
+  content: "";
 }
 
 .glyphicon-camera:before {
-  content: "\e046";
+  content: "";
 }
 
 .glyphicon-font:before {
-  content: "\e047";
+  content: "";
 }
 
 .glyphicon-bold:before {
-  content: "\e048";
+  content: "";
 }
 
 .glyphicon-italic:before {
-  content: "\e049";
+  content: "";
 }
 
 .glyphicon-text-height:before {
-  content: "\e050";
+  content: "";
 }
 
 .glyphicon-text-width:before {
-  content: "\e051";
+  content: "";
 }
 
 .glyphicon-align-left:before {
-  content: "\e052";
+  content: "";
 }
 
 .glyphicon-align-center:before {
-  content: "\e053";
+  content: "";
 }
 
 .glyphicon-align-right:before {
-  content: "\e054";
+  content: "";
 }
 
 .glyphicon-align-justify:before {
-  content: "\e055";
+  content: "";
 }
 
 .glyphicon-list:before {
-  content: "\e056";
+  content: "";
 }
 
 .glyphicon-indent-left:before {
-  content: "\e057";
+  content: "";
 }
 
 .glyphicon-indent-right:before {
-  content: "\e058";
+  content: "";
 }
 
 .glyphicon-facetime-video:before {
-  content: "\e059";
+  content: "";
 }
 
 .glyphicon-picture:before {
-  content: "\e060";
+  content: "";
 }
 
 .glyphicon-map-marker:before {
-  content: "\e062";
+  content: "";
 }
 
 .glyphicon-adjust:before {
-  content: "\e063";
+  content: "";
 }
 
 .glyphicon-tint:before {
-  content: "\e064";
+  content: "";
 }
 
 .glyphicon-edit:before {
-  content: "\e065";
+  content: "";
 }
 
 .glyphicon-share:before {
-  content: "\e066";
+  content: "";
 }
 
 .glyphicon-check:before {
-  content: "\e067";
+  content: "";
 }
 
 .glyphicon-move:before {
-  content: "\e068";
+  content: "";
 }
 
 .glyphicon-step-backward:before {
-  content: "\e069";
+  content: "";
 }
 
 .glyphicon-fast-backward:before {
-  content: "\e070";
+  content: "";
 }
 
 .glyphicon-backward:before {
-  content: "\e071";
+  content: "";
 }
 
 .glyphicon-play:before {
-  content: "\e072";
+  content: "";
 }
 
 .glyphicon-pause:before {
-  content: "\e073";
+  content: "";
 }
 
 .glyphicon-stop:before {
-  content: "\e074";
+  content: "";
 }
 
 .glyphicon-forward:before {
-  content: "\e075";
+  content: "";
 }
 
 .glyphicon-fast-forward:before {
-  content: "\e076";
+  content: "";
 }
 
 .glyphicon-step-forward:before {
-  content: "\e077";
+  content: "";
 }
 
 .glyphicon-eject:before {
-  content: "\e078";
+  content: "";
 }
 
 .glyphicon-chevron-left:before {
-  content: "\e079";
+  content: "";
 }
 
 .glyphicon-chevron-right:before {
-  content: "\e080";
+  content: "";
 }
 
 .glyphicon-plus-sign:before {
-  content: "\e081";
+  content: "";
 }
 
 .glyphicon-minus-sign:before {
-  content: "\e082";
+  content: "";
 }
 
 .glyphicon-remove-sign:before {
-  content: "\e083";
+  content: "";
 }
 
 .glyphicon-ok-sign:before {
-  content: "\e084";
+  content: "";
 }
 
 .glyphicon-question-sign:before {
-  content: "\e085";
+  content: "";
 }
 
 .glyphicon-info-sign:before {
-  content: "\e086";
+  content: "";
 }
 
 .glyphicon-screenshot:before {
-  content: "\e087";
+  content: "";
 }
 
 .glyphicon-remove-circle:before {
-  content: "\e088";
+  content: "";
 }
 
 .glyphicon-ok-circle:before {
-  content: "\e089";
+  content: "";
 }
 
 .glyphicon-ban-circle:before {
-  content: "\e090";
+  content: "";
 }
 
 .glyphicon-arrow-left:before {
-  content: "\e091";
+  content: "";
 }
 
 .glyphicon-arrow-right:before {
-  content: "\e092";
+  content: "";
 }
 
 .glyphicon-arrow-up:before {
-  content: "\e093";
+  content: "";
 }
 
 .glyphicon-arrow-down:before {
-  content: "\e094";
+  content: "";
 }
 
 .glyphicon-share-alt:before {
-  content: "\e095";
+  content: "";
 }
 
 .glyphicon-resize-full:before {
-  content: "\e096";
+  content: "";
 }
 
 .glyphicon-resize-small:before {
-  content: "\e097";
+  content: "";
 }
 
 .glyphicon-exclamation-sign:before {
-  content: "\e101";
+  content: "";
 }
 
 .glyphicon-gift:before {
-  content: "\e102";
+  content: "";
 }
 
 .glyphicon-leaf:before {
-  content: "\e103";
+  content: "";
 }
 
 .glyphicon-fire:before {
-  content: "\e104";
+  content: "";
 }
 
 .glyphicon-eye-open:before {
-  content: "\e105";
+  content: "";
 }
 
 .glyphicon-eye-close:before {
-  content: "\e106";
+  content: "";
 }
 
 .glyphicon-warning-sign:before {
-  content: "\e107";
+  content: "";
 }
 
 .glyphicon-plane:before {
-  content: "\e108";
+  content: "";
 }
 
 .glyphicon-calendar:before {
-  content: "\e109";
+  content: "";
 }
 
 .glyphicon-random:before {
-  content: "\e110";
+  content: "";
 }
 
 .glyphicon-comment:before {
-  content: "\e111";
+  content: "";
 }
 
 .glyphicon-magnet:before {
-  content: "\e112";
+  content: "";
 }
 
 .glyphicon-chevron-up:before {
-  content: "\e113";
+  content: "";
 }
 
 .glyphicon-chevron-down:before {
-  content: "\e114";
+  content: "";
 }
 
 .glyphicon-retweet:before {
-  content: "\e115";
+  content: "";
 }
 
 .glyphicon-shopping-cart:before {
-  content: "\e116";
+  content: "";
 }
 
 .glyphicon-folder-close:before {
-  content: "\e117";
+  content: "";
 }
 
 .glyphicon-folder-open:before {
-  content: "\e118";
+  content: "";
 }
 
 .glyphicon-resize-vertical:before {
-  content: "\e119";
+  content: "";
 }
 
 .glyphicon-resize-horizontal:before {
-  content: "\e120";
+  content: "";
 }
 
 .glyphicon-hdd:before {
-  content: "\e121";
+  content: "";
 }
 
 .glyphicon-bullhorn:before {
-  content: "\e122";
+  content: "";
 }
 
 .glyphicon-bell:before {
-  content: "\e123";
+  content: "";
 }
 
 .glyphicon-certificate:before {
-  content: "\e124";
+  content: "";
 }
 
 .glyphicon-thumbs-up:before {
-  content: "\e125";
+  content: "";
 }
 
 .glyphicon-thumbs-down:before {
-  content: "\e126";
+  content: "";
 }
 
 .glyphicon-hand-right:before {
-  content: "\e127";
+  content: "";
 }
 
 .glyphicon-hand-left:before {
-  content: "\e128";
+  content: "";
 }
 
 .glyphicon-hand-up:before {
-  content: "\e129";
+  content: "";
 }
 
 .glyphicon-hand-down:before {
-  content: "\e130";
+  content: "";
 }
 
 .glyphicon-circle-arrow-right:before {
-  content: "\e131";
+  content: "";
 }
 
 .glyphicon-circle-arrow-left:before {
-  content: "\e132";
+  content: "";
 }
 
 .glyphicon-circle-arrow-up:before {
-  content: "\e133";
+  content: "";
 }
 
 .glyphicon-circle-arrow-down:before {
-  content: "\e134";
+  content: "";
 }
 
 .glyphicon-globe:before {
-  content: "\e135";
+  content: "";
 }
 
 .glyphicon-wrench:before {
-  content: "\e136";
+  content: "";
 }
 
 .glyphicon-tasks:before {
-  content: "\e137";
+  content: "";
 }
 
 .glyphicon-filter:before {
-  content: "\e138";
+  content: "";
 }
 
 .glyphicon-briefcase:before {
-  content: "\e139";
+  content: "";
 }
 
 .glyphicon-fullscreen:before {
-  content: "\e140";
+  content: "";
 }
 
 .glyphicon-dashboard:before {
-  content: "\e141";
+  content: "";
 }
 
 .glyphicon-paperclip:before {
-  content: "\e142";
+  content: "";
 }
 
 .glyphicon-heart-empty:before {
-  content: "\e143";
+  content: "";
 }
 
 .glyphicon-link:before {
-  content: "\e144";
+  content: "";
 }
 
 .glyphicon-phone:before {
-  content: "\e145";
+  content: "";
 }
 
 .glyphicon-pushpin:before {
-  content: "\e146";
+  content: "";
 }
 
 .glyphicon-usd:before {
-  content: "\e148";
+  content: "";
 }
 
 .glyphicon-gbp:before {
-  content: "\e149";
+  content: "";
 }
 
 .glyphicon-sort:before {
-  content: "\e150";
+  content: "";
 }
 
 .glyphicon-sort-by-alphabet:before {
-  content: "\e151";
+  content: "";
 }
 
 .glyphicon-sort-by-alphabet-alt:before {
-  content: "\e152";
+  content: "";
 }
 
 .glyphicon-sort-by-order:before {
-  content: "\e153";
+  content: "";
 }
 
 .glyphicon-sort-by-order-alt:before {
-  content: "\e154";
+  content: "";
 }
 
 .glyphicon-sort-by-attributes:before {
-  content: "\e155";
+  content: "";
 }
 
 .glyphicon-sort-by-attributes-alt:before {
-  content: "\e156";
+  content: "";
 }
 
 .glyphicon-unchecked:before {
-  content: "\e157";
+  content: "";
 }
 
 .glyphicon-expand:before {
-  content: "\e158";
+  content: "";
 }
 
 .glyphicon-collapse-down:before {
-  content: "\e159";
+  content: "";
 }
 
 .glyphicon-collapse-up:before {
-  content: "\e160";
+  content: "";
 }
 
 .glyphicon-log-in:before {
-  content: "\e161";
+  content: "";
 }
 
 .glyphicon-flash:before {
-  content: "\e162";
+  content: "";
 }
 
 .glyphicon-log-out:before {
-  content: "\e163";
+  content: "";
 }
 
 .glyphicon-new-window:before {
-  content: "\e164";
+  content: "";
 }
 
 .glyphicon-record:before {
-  content: "\e165";
+  content: "";
 }
 
 .glyphicon-save:before {
-  content: "\e166";
+  content: "";
 }
 
 .glyphicon-open:before {
-  content: "\e167";
+  content: "";
 }
 
 .glyphicon-saved:before {
-  content: "\e168";
+  content: "";
 }
 
 .glyphicon-import:before {
-  content: "\e169";
+  content: "";
 }
 
 .glyphicon-export:before {
-  content: "\e170";
+  content: "";
 }
 
 .glyphicon-send:before {
-  content: "\e171";
+  content: "";
 }
 
 .glyphicon-floppy-disk:before {
-  content: "\e172";
+  content: "";
 }
 
 .glyphicon-floppy-saved:before {
-  content: "\e173";
+  content: "";
 }
 
 .glyphicon-floppy-remove:before {
-  content: "\e174";
+  content: "";
 }
 
 .glyphicon-floppy-save:before {
-  content: "\e175";
+  content: "";
 }
 
 .glyphicon-floppy-open:before {
-  content: "\e176";
+  content: "";
 }
 
 .glyphicon-credit-card:before {
-  content: "\e177";
+  content: "";
 }
 
 .glyphicon-transfer:before {
-  content: "\e178";
+  content: "";
 }
 
 .glyphicon-cutlery:before {
-  content: "\e179";
+  content: "";
 }
 
 .glyphicon-header:before {
-  content: "\e180";
+  content: "";
 }
 
 .glyphicon-compressed:before {
-  content: "\e181";
+  content: "";
 }
 
 .glyphicon-earphone:before {
-  content: "\e182";
+  content: "";
 }
 
 .glyphicon-phone-alt:before {
-  content: "\e183";
+  content: "";
 }
 
 .glyphicon-tower:before {
-  content: "\e184";
+  content: "";
 }
 
 .glyphicon-stats:before {
-  content: "\e185";
+  content: "";
 }
 
 .glyphicon-sd-video:before {
-  content: "\e186";
+  content: "";
 }
 
 .glyphicon-hd-video:before {
-  content: "\e187";
+  content: "";
 }
 
 .glyphicon-subtitles:before {
-  content: "\e188";
+  content: "";
 }
 
 .glyphicon-sound-stereo:before {
-  content: "\e189";
+  content: "";
 }
 
 .glyphicon-sound-dolby:before {
-  content: "\e190";
+  content: "";
 }
 
 .glyphicon-sound-5-1:before {
-  content: "\e191";
+  content: "";
 }
 
 .glyphicon-sound-6-1:before {
-  content: "\e192";
+  content: "";
 }
 
 .glyphicon-sound-7-1:before {
-  content: "\e193";
+  content: "";
 }
 
 .glyphicon-copyright-mark:before {
-  content: "\e194";
+  content: "";
 }
 
 .glyphicon-registration-mark:before {
-  content: "\e195";
+  content: "";
 }
 
 .glyphicon-cloud-download:before {
-  content: "\e197";
+  content: "";
 }
 
 .glyphicon-cloud-upload:before {
-  content: "\e198";
+  content: "";
 }
 
 .glyphicon-tree-conifer:before {
-  content: "\e199";
+  content: "";
 }
 
 .glyphicon-tree-deciduous:before {
-  content: "\e200";
+  content: "";
 }
 
 .glyphicon-cd:before {
-  content: "\e201";
+  content: "";
 }
 
 .glyphicon-save-file:before {
-  content: "\e202";
+  content: "";
 }
 
 .glyphicon-open-file:before {
-  content: "\e203";
+  content: "";
 }
 
 .glyphicon-level-up:before {
-  content: "\e204";
+  content: "";
 }
 
 .glyphicon-copy:before {
-  content: "\e205";
+  content: "";
 }
 
 .glyphicon-paste:before {
-  content: "\e206";
+  content: "";
 }
 
 .glyphicon-alert:before {
-  content: "\e209";
+  content: "";
 }
 
 .glyphicon-equalizer:before {
-  content: "\e210";
+  content: "";
 }
 
 .glyphicon-king:before {
-  content: "\e211";
+  content: "";
 }
 
 .glyphicon-queen:before {
-  content: "\e212";
+  content: "";
 }
 
 .glyphicon-pawn:before {
-  content: "\e213";
+  content: "";
 }
 
 .glyphicon-bishop:before {
-  content: "\e214";
+  content: "";
 }
 
 .glyphicon-knight:before {
-  content: "\e215";
+  content: "";
 }
 
 .glyphicon-baby-formula:before {
-  content: "\e216";
+  content: "";
 }
 
 .glyphicon-tent:before {
@@ -1201,19 +1201,19 @@ h3 {
 }
 
 .glyphicon-blackboard:before {
-  content: "\e218";
+  content: "";
 }
 
 .glyphicon-bed:before {
-  content: "\e219";
+  content: "";
 }
 
 .glyphicon-apple:before {
-  content: "\f8ff";
+  content: "";
 }
 
 .glyphicon-erase:before {
-  content: "\e221";
+  content: "";
 }
 
 .glyphicon-hourglass:before {
@@ -1221,31 +1221,31 @@ h3 {
 }
 
 .glyphicon-lamp:before {
-  content: "\e223";
+  content: "";
 }
 
 .glyphicon-duplicate:before {
-  content: "\e224";
+  content: "";
 }
 
 .glyphicon-piggy-bank:before {
-  content: "\e225";
+  content: "";
 }
 
 .glyphicon-scissors:before {
-  content: "\e226";
+  content: "";
 }
 
 .glyphicon-bitcoin:before {
-  content: "\e227";
+  content: "";
 }
 
 .glyphicon-btc:before {
-  content: "\e227";
+  content: "";
 }
 
 .glyphicon-xbt:before {
-  content: "\e227";
+  content: "";
 }
 
 .glyphicon-yen:before {
@@ -1265,127 +1265,127 @@ h3 {
 }
 
 .glyphicon-scale:before {
-  content: "\e230";
+  content: "";
 }
 
 .glyphicon-ice-lolly:before {
-  content: "\e231";
+  content: "";
 }
 
 .glyphicon-ice-lolly-tasted:before {
-  content: "\e232";
+  content: "";
 }
 
 .glyphicon-education:before {
-  content: "\e233";
+  content: "";
 }
 
 .glyphicon-option-horizontal:before {
-  content: "\e234";
+  content: "";
 }
 
 .glyphicon-option-vertical:before {
-  content: "\e235";
+  content: "";
 }
 
 .glyphicon-menu-hamburger:before {
-  content: "\e236";
+  content: "";
 }
 
 .glyphicon-modal-window:before {
-  content: "\e237";
+  content: "";
 }
 
 .glyphicon-oil:before {
-  content: "\e238";
+  content: "";
 }
 
 .glyphicon-grain:before {
-  content: "\e239";
+  content: "";
 }
 
 .glyphicon-sunglasses:before {
-  content: "\e240";
+  content: "";
 }
 
 .glyphicon-text-size:before {
-  content: "\e241";
+  content: "";
 }
 
 .glyphicon-text-color:before {
-  content: "\e242";
+  content: "";
 }
 
 .glyphicon-text-background:before {
-  content: "\e243";
+  content: "";
 }
 
 .glyphicon-object-align-top:before {
-  content: "\e244";
+  content: "";
 }
 
 .glyphicon-object-align-bottom:before {
-  content: "\e245";
+  content: "";
 }
 
 .glyphicon-object-align-horizontal:before {
-  content: "\e246";
+  content: "";
 }
 
 .glyphicon-object-align-left:before {
-  content: "\e247";
+  content: "";
 }
 
 .glyphicon-object-align-vertical:before {
-  content: "\e248";
+  content: "";
 }
 
 .glyphicon-object-align-right:before {
-  content: "\e249";
+  content: "";
 }
 
 .glyphicon-triangle-right:before {
-  content: "\e250";
+  content: "";
 }
 
 .glyphicon-triangle-left:before {
-  content: "\e251";
+  content: "";
 }
 
 .glyphicon-triangle-bottom:before {
-  content: "\e252";
+  content: "";
 }
 
 .glyphicon-triangle-top:before {
-  content: "\e253";
+  content: "";
 }
 
 .glyphicon-console:before {
-  content: "\e254";
+  content: "";
 }
 
 .glyphicon-superscript:before {
-  content: "\e255";
+  content: "";
 }
 
 .glyphicon-subscript:before {
-  content: "\e256";
+  content: "";
 }
 
 .glyphicon-menu-left:before {
-  content: "\e257";
+  content: "";
 }
 
 .glyphicon-menu-right:before {
-  content: "\e258";
+  content: "";
 }
 
 .glyphicon-menu-down:before {
-  content: "\e259";
+  content: "";
 }
 
 .glyphicon-menu-up:before {
-  content: "\e260";
+  content: "";
 }
 
 * {
@@ -11910,8 +11910,8 @@ body[dir=rtl] .mx-header-left {
   top: 0;
   width: 100%;
   padding: 1rem;
-  border: 1px solid hsl(200deg, 96%, 41%);
-  background-color: hsl(200deg, 96%, 44%);
+  border: 1px solid #048acd;
+  background-color: #0494dc;
   box-shadow: 0 5px 20px rgba(1, 37, 55, 0.16);
   color: white;
   text-align: center;
@@ -14906,7 +14906,6 @@ input[type=checkbox] {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  transform: translateZ(0);
 }
 input[type=checkbox]:before, input[type=checkbox]:after {
   position: absolute;
@@ -16691,21 +16690,21 @@ img.img-scale-down,
   background-color: #f8f8f8;
   box-shadow: 0 2px 20px 1px rgba(5, 15, 129, 0.05), 0 2px 16px 0 rgba(33, 43, 54, 0.08);
 }
-.popupmenu-menu.popupmenu-position-left:not(.popup-portal) {
+.popupmenu-menu.popupmenu-position-left {
   top: 0;
   left: 0;
   transform: translateX(-100%);
 }
-.popupmenu-menu.popupmenu-position-right:not(.popup-portal) {
+.popupmenu-menu.popupmenu-position-right {
   top: 0;
   right: 0;
   transform: translateX(100%);
 }
-.popupmenu-menu.popupmenu-position-top:not(.popup-portal) {
+.popupmenu-menu.popupmenu-position-top {
   top: 0;
   transform: translateY(-100%);
 }
-.popupmenu-menu.popupmenu-position-bottom:not(.popup-portal) {
+.popupmenu-menu.popupmenu-position-bottom {
   bottom: 0;
   transform: translateY(100%);
 }
@@ -19239,7 +19238,7 @@ h6,
   padding: 0px;
   margin: 0px;
   transform: translate(-50%, -50%);
-  color: rgb(85, 85, 85);
+  color: #555555;
 }
 
 .widget-progress-circle-clickable {
@@ -20818,9 +20817,9 @@ div.widget-switch-brand-danger.android .widget-switch .widget-switch-btn-wrapper
 }
 
 div.widget-switch.iOS .widget-switch-btn-wrapper.checked.widget-switch-btn-wrapper-default {
-  border-color: rgb(100, 189, 99);
-  background-color: rgb(100, 189, 99);
-  box-shadow: rgb(100, 189, 99) 0 0 0 16px inset;
+  border-color: #64bd63;
+  background-color: #64bd63;
+  box-shadow: #64bd63 0 0 0 16px inset;
 }
 div.widget-switch.iOS .widget-switch-btn-wrapper.checked.widget-switch-btn-wrapper-success {
   border-color: #3cb33d;
@@ -20895,9 +20894,9 @@ div.widget-switch.android .widget-switch-btn-wrapper.checked.widget-switch-btn-w
   background: #24276c;
 }
 div.widget-switch.auto .widget-switch-btn-wrapper.checked.widget-switch-btn-wrapper-default {
-  border-color: rgb(100, 189, 99);
-  background-color: rgb(100, 189, 99);
-  box-shadow: rgb(100, 189, 99) 0 0 0 16px inset;
+  border-color: #64bd63;
+  background-color: #64bd63;
+  box-shadow: #64bd63 0 0 0 16px inset;
 }
 div.widget-switch.auto .widget-switch-btn-wrapper.checked.widget-switch-btn-wrapper-success {
   border-color: #3cb33d;
@@ -20973,9 +20972,9 @@ html div.dj_android .widget-switch.auto .widget-switch-btn-wrapper.checked.widge
   background: #24276c;
 }
 html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-switch-btn-wrapper-default {
-  border-color: rgb(100, 189, 99);
-  background-color: rgb(100, 189, 99);
-  box-shadow: rgb(100, 189, 99) 0 0 0 16px inset;
+  border-color: #64bd63;
+  background-color: #64bd63;
+  box-shadow: #64bd63 0 0 0 16px inset;
 }
 html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-switch-btn-wrapper-success {
   border-color: #3cb33d;
@@ -21201,7 +21200,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 }
 .layout-atlas-responsive .mx-scrollcontainer-slide.mx-scrollcontainer-open > .region-sidebar,
 .layout-atlas-responsive-default .mx-scrollcontainer-slide.mx-scrollcontainer-open > .region-sidebar {
-  width: 52px !important;
+  width: 232px !important;
 }
 .layout-atlas-responsive .mx-scrollcontainer-slide.mx-scrollcontainer-open > .region-sidebar > .mx-scrollcontainer-wrapper,
 .layout-atlas-responsive-default .mx-scrollcontainer-slide.mx-scrollcontainer-open > .region-sidebar > .mx-scrollcontainer-wrapper {
@@ -21210,7 +21209,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas-responsive .mx-scrollcontainer-slide .region-sidebar > .mx-scrollcontainer-wrapper,
 .layout-atlas-responsive-default .mx-scrollcontainer-slide .region-sidebar > .mx-scrollcontainer-wrapper {
   z-index: 2;
-  left: -52px;
+  left: 0 !important;
   background-color: inherit;
 }
 @media (max-width: calc(768px - 1px)) {
@@ -21921,478 +21920,6 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 
 .statuspage-subtitle {
   opacity: 0.6;
-}
-
-/* 
-    ==| Variables |=========================================================================================
-*/
-/* 
-    ==| Widget blocks |=====================================================================================
-    These blocks contains styles directly related to the widget's appearance and are mostly unique styles
-    needed to display the widget's UI correctly.
-*/
-.mxfeedback-lightbox {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000002;
-}
-.mxfeedback-lightbox__image {
-  margin: auto;
-  display: block;
-  max-width: 70%;
-}
-@media only screen and (min-width: 768px) {
-  .mxfeedback-lightbox__image {
-    max-width: calc(100% - 16px);
-  }
-}
-.mxfeedback-lightbox .mxfeedback-close-button__icon {
-  width: 16px;
-  height: 16px;
-}
-
-.mxfeedback-start-button {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translate(50%, -50%) rotate(270deg);
-  transform-origin: bottom center;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 4px 4px 0 0;
-  background-color: #264ae5;
-  color: #fff;
-  font-size: 16px;
-  box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.3);
-  z-index: 999998;
-}
-.mxfeedback-start-button:focus, .mxfeedback-start-button:hover {
-  background-color: #1e3bb7;
-}
-
-.mxfeedback-annotation-canvas {
-  z-index: 1000003;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.mxfeedback-annotation-canvas__canvas {
-  position: fixed;
-  margin-top: 48px;
-}
-
-.mxfeedback-annotation-frame {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000004;
-}
-
-.mxfeedback-failed__message {
-  align-self: center;
-  margin: 8px;
-}
-.mxfeedback-failed__error-image {
-  margin-top: 30px;
-}
-
-.mxfeedback-result__result-image {
-  align-self: center;
-  width: auto;
-  max-width: 50%;
-}
-.mxfeedback-result .mxfeedback-dialog__body-text {
-  margin: auto;
-}
-.mxfeedback-result__result-image {
-  margin-top: 30px;
-}
-
-.mxfeedback-feedback-form__cancel-button {
-  border: 0;
-}
-
-/* 
-    ==| Generic blocks |====================================================================================
-    These blocks are generic blocks. These styles are styles that apply to the widget's entire UI and
-    outline the basic styles of the widget (in accordance with Atlas UI).
-*/
-.mxfeedback-dialog {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 24px;
-  width: 560px;
-  max-width: calc(100% - 40px);
-  max-height: calc(100% - 40px);
-  background-color: #fff;
-  border: 1px solid #ced0d3;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden auto;
-  z-index: 1000001;
-}
-.mxfeedback-dialog__title {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 120%;
-  margin: 0 0 16px;
-  color: #0a1325;
-  align-self: center;
-}
-
-.mxfeedback-underlay {
-  inset: 0;
-  z-index: 1000001;
-}
-
-.mxfeedback-close-button {
-  right: 16px;
-  top: 12px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-}
-.mxfeedback-close-button__icon {
-  width: 12px;
-  height: 12px;
-  color: #0a1325;
-  stroke: #0a1325;
-}
-.mxfeedback-close-button--white > .mxfeedback-close-button__icon {
-  fill: #fff;
-}
-
-.mxfeedback-toolbar {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  top: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 16px 32px;
-  background-color: #fff;
-  border: 1px solid #ced0d3;
-  border-radius: 4px;
-  font-size: 12px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1000004;
-}
-.mxfeedback-toolbar--gap-md {
-  gap: 16px;
-}
-.mxfeedback-toolbar--gap-lg {
-  gap: 32px;
-}
-
-.mxfeedback-tool-button {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: transparent;
-  border: 0;
-  padding: 0;
-}
-.mxfeedback-tool-button--active {
-  color: #264ae5;
-}
-.mxfeedback-tool-button:focus-visible {
-  color: #1e3bb7;
-}
-.mxfeedback-tool-button__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.mxfeedback-tool-button__icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-.mxfeedback-tool-button__label {
-  margin-top: 4px;
-  color: inherit;
-}
-.mxfeedback-tool-button__caret {
-  fill: #0a1325;
-  width: 8px;
-  height: 8px;
-}
-.mxfeedback-tool-button__dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.mxfeedback-tool-button__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  padding: 8px;
-  background: #fff;
-  border: 1px solid #ced0d3;
-  border-radius: 4px;
-  width: 144px;
-  z-index: 1;
-}
-.mxfeedback-tool-button__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: calc(8px / 2);
-}
-.mxfeedback-tool-button__list--col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.mxfeedback-tool-button__color {
-  position: relative;
-  padding: 0;
-  border: none;
-  border-radius: 100%;
-  aspect-ratio: 1/1;
-}
-.mxfeedback-tool-button__color:focus {
-  outline: 2px solid #264ae5;
-  outline-offset: 2px;
-}
-.mxfeedback-tool-button__color--midnight {
-  background-color: #2f3646;
-}
-.mxfeedback-tool-button__color--grey {
-  background-color: #c1c3c8;
-}
-.mxfeedback-tool-button__color--green {
-  background-color: #4fd84f;
-}
-.mxfeedback-tool-button__color--blue {
-  background-color: #47a9ff;
-}
-.mxfeedback-tool-button__color--purple {
-  background-color: #845eff;
-}
-.mxfeedback-tool-button__color--magenta {
-  background-color: #ca49f8;
-}
-.mxfeedback-tool-button__color--red {
-  background-color: #fb4a4c;
-}
-.mxfeedback-tool-button__color--yellow {
-  background-color: #fcc73a;
-}
-.mxfeedback-tool-button__color svg {
-  width: 10px;
-  height: 10px;
-  stroke: #fff;
-}
-.mxfeedback-tool-button__thickness {
-  background-color: transparent;
-  border: none;
-  border-radius: 4px;
-  aspect-ratio: 4/3;
-}
-.mxfeedback-tool-button__thickness:hover {
-  background-color: #a9acb3;
-}
-.mxfeedback-tool-button__thickness:focus {
-  outline: 2px solid #264ae5;
-  outline-offset: 2px;
-}
-.mxfeedback-tool-button__thickness--selected {
-  background-color: #787d87;
-}
-.mxfeedback-tool-button__thickness::before {
-  content: "";
-  display: block;
-  background-color: #2f3646;
-  width: 100%;
-  transform: rotate(-45deg);
-}
-.mxfeedback-tool-button__thickness--one::before {
-  height: 1px;
-}
-.mxfeedback-tool-button__thickness--two::before {
-  height: 2px;
-}
-.mxfeedback-tool-button__thickness--three::before {
-  height: 3px;
-}
-.mxfeedback-tool-button__thickness--four::before {
-  height: 4px;
-}
-.mxfeedback-tool-button__thickness--five::before {
-  height: 5px;
-}
-.mxfeedback-tool-button__thickness--six::before {
-  height: 6px;
-}
-
-.mxfeedback-label-group {
-  display: flex;
-  align-items: center;
-  gap: calc(8px / 2);
-  margin-bottom: 4px;
-}
-.mxfeedback-label-group__label.control-label {
-  margin-bottom: 0;
-}
-
-.mxfeedback-button-group {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-}
-.mxfeedback-button-group--screenshot-container {
-  flex-direction: row-reverse;
-}
-.mxfeedback-button-group--gap-md {
-  gap: 16px;
-}
-.mxfeedback-button-group--gap-lg {
-  gap: 32px;
-}
-.mxfeedback-button-group--justify-start {
-  justify-content: flex-start;
-}
-.mxfeedback-button-group--justify-center {
-  justify-content: center;
-}
-.mxfeedback-button-group--row-xs {
-  flex-direction: column;
-}
-@media only screen and (min-width: 768px) {
-  .mxfeedback-button-group--row-xs {
-    flex-direction: row;
-  }
-}
-
-.mxfeedback-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-.mxfeedback-button svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
-.mxfeedback-screenshot-preview {
-  position: relative;
-  margin: 20px auto;
-  height: 192px;
-  cursor: pointer;
-}
-.mxfeedback-screenshot-preview__image {
-  display: block;
-  object-fit: contain;
-  height: 100%;
-  aspect-ratio: 16/9;
-  border: 1px solid #787d87;
-  border-radius: 4px;
-}
-.mxfeedback-screenshot-preview__overlay {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  opacity: 0;
-  transition: 0.3s ease;
-  background-color: #0a1325;
-  border: 1px solid #474e5c;
-  border-radius: 4px;
-}
-.mxfeedback-screenshot-preview__overlay:hover {
-  opacity: 0.5;
-}
-.mxfeedback-screenshot-preview__overlay:focus-visible {
-  opacity: 0.5;
-}
-.mxfeedback-screenshot-preview__preview-icon {
-  width: 20px;
-  height: 20px;
-  fill: #f8f8f8;
-}
-.mxfeedback-screenshot-preview__delete-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
-  width: 20px;
-  height: 20px;
-  stroke: #474e5c;
-  fill: #f8f8f8;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.mxfeedback-tooltip {
-  display: flex;
-  position: relative;
-}
-.mxfeedback-tooltip__icon {
-  width: 16px;
-  height: 16px;
-}
-.mxfeedback-tooltip__icon:hover ~ .mxfeedback-tooltip__tip {
-  visibility: visible;
-}
-.mxfeedback-tooltip__tip {
-  visibility: hidden;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: calc(50% - 32px);
-  width: 240px;
-  max-width: calc(100vw - 32px);
-  padding: 6px 8px;
-  margin-bottom: 0;
-  border-radius: 2px;
-  background-color: #0a1325;
-  color: #fff;
-  font-size: 12px;
-  line-height: 1.5;
-  z-index: 1;
-  transition: visibility 100ms ease-in-out;
-}
-.mxfeedback-tooltip__tip::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 32px;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 12px;
-  height: 12px;
-  background-color: inherit;
-  text-align: center;
-  pointer-events: none;
 }
 
 /*# sourceMappingURL=theme.compiled.css.map */
