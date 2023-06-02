@@ -121,6 +121,7 @@
             content: "";
             display: block;
             background-color: map-get($annotation-colors, "midnight");
+            width: 100%;
             transform: rotate(-45deg);
         }
 

@@ -24,6 +24,7 @@
         bottom: 0;
         left: 0;
         right: 0;
+        width: 100%;
         opacity: 0;
         transition: 0.3s ease;
         background-color: $gray-darker;
@@ -42,7 +43,7 @@
     &__preview-icon {
         width: $mxfeedback-icon-size-md;
         height: $mxfeedback-icon-size-md;
-        stroke: $gray-lighter;
+        fill: $gray-lighter;
     }
 
     &__delete-icon {

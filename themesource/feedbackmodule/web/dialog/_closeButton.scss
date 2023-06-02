@@ -10,14 +10,13 @@
     position: absolute;
     
     &__icon {
-        width: $mxfeedback-icon-size-xs;
-        height: $mxfeedback-icon-size-xs;
+        width: 12px;
+        height: 12px;
         color: $font-color-default;
         stroke: $font-color-default;
     }
 
     &--white > &__icon {
-        color: $btn-primary-color;
-        stroke: $btn-primary-color;
+        fill: $btn-primary-color;
     }
 }

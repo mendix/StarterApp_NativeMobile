@@ -9,7 +9,6 @@ $_block: ".mxfeedback-tooltip";
     &__icon {
         width: $mxfeedback-icon-size-sm;
         height: $mxfeedback-icon-size-sm;
-        stroke: $font-color-default;
 
         &:hover ~ #{$_block}__tip {
             visibility: visible;
@@ -22,7 +21,7 @@ $_block: ".mxfeedback-tooltip";
         top: calc(100% + #{$spacing-small});
         left: calc(50% - #{$_offset});
         width: $mxfeedback-tooltip-width;
-        max-width: calc(100vw - 32px);
+        max-width: calc(100vw - #{$spacing-larger});
         padding: 6px 8px; // not using variables here as its padding should be precise
         margin-bottom: 0;
         border-radius: 2px; // not using variables here as its border radius should be precise

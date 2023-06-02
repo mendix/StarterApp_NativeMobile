@@ -10,8 +10,8 @@
     transform: translate(-50%, -50%);
     padding: $spacing-large;
     width: $mxfeedback-dialog-width;
-    max-width: calc(100% - $mxfeedback-dialog-spacing);
-    max-height: calc(100% - $mxfeedback-dialog-spacing);
+    max-width: calc(100% - #{$mxfeedback-dialog-spacing});
+    max-height: calc(100% - #{$mxfeedback-dialog-spacing});
     background-color: $bg-color-secondary;
     border: 1px solid $border-color-default;
     border-radius: $border-radius-default;
