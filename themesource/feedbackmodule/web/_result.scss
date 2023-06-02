@@ -1,0 +1,9 @@
+/// Style the image on the successfully submitted page
+
+.mxfeedback-result {
+  &__result-image {
+      align-self: center;
+      width: auto;
+      max-width: 50%;
+  }
+}
