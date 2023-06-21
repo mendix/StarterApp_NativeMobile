@@ -16614,7 +16614,9 @@ img.img-scale-down,
   border-top-color: #fff;
   border-bottom-color: #fff;
 }
-.region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon {
+.region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   font-size: 20px;
 }
 .region-sidebar .mx-navigationtree .navbar-inner > ul > li a:hover,
@@ -21017,6 +21019,12 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas .toggle-btn > .glyphicon {
   margin: 0;
 }
+.layout-atlas .toggle-btn > .mx-icon-lined {
+  font-family: "Atlas_Core$Atlas";
+}
+.layout-atlas .toggle-btn > .mx-icon-filled {
+  font-family: "Atlas_Core$Atlas_Filled";
+}
 .layout-atlas .mx-scrollcontainer-open .expand-btn > img {
   transform: rotate(180deg);
 }
@@ -21260,7 +21268,11 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   overflow: hidden;
 }
 .layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
-.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .glyphicon {
+.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled,
+.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21279,6 +21291,13 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   border-color: transparent;
   border-radius: 0;
   background: transparent;
+  display: flex;
+}
+.layout-atlas-responsive .region-topbar .mx-icon-filled,
+.layout-atlas-responsive .region-topbar .mx-icon-lined,
+.layout-atlas-responsive-default .region-topbar .mx-icon-filled,
+.layout-atlas-responsive-default .region-topbar .mx-icon-lined {
+  font-size: 20px;
 }
 
 .layout-atlas-responsive-topbar .region-topbar {
