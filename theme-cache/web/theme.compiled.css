@@ -13717,16 +13717,24 @@ body {
     flex: 1;
   }
 }
-.loginpage-form .form-group .inputwrapper .glyphicon {
+.loginpage-form .form-group .inputwrapper .glyphicon,
+.loginpage-form .form-group .inputwrapper .mx-icon-lined,
+.loginpage-form .form-group .inputwrapper .mx-icon-filled {
   position: absolute;
   top: 50%;
   left: 8px;
   transform: translateY(-50%);
 }
-.loginpage-form .form-group .inputwrapper .glyphicon:before {
+.loginpage-form .form-group .inputwrapper .glyphicon:before,
+.loginpage-form .form-group .inputwrapper .mx-icon-lined:before,
+.loginpage-form .form-group .inputwrapper .mx-icon-filled:before {
   transition: color 0.4s;
 }
-.loginpage-form .form-group .inputwrapper .glyphicon-eye-open:hover, .loginpage-form .form-group .inputwrapper .glyphicon-eye-close:hover {
+.loginpage-form .form-group .inputwrapper .glyphicon-eye-open:hover, .loginpage-form .form-group .inputwrapper .glyphicon-eye-close:hover,
+.loginpage-form .form-group .inputwrapper .mx-icon-lined-eye-open:hover,
+.loginpage-form .form-group .inputwrapper .mx-icon-lined-eye-close:hover,
+.loginpage-form .form-group .inputwrapper .mx-icon-filled-eye-open:hover,
+.loginpage-form .form-group .inputwrapper .mx-icon-filled-eye-close:hover {
   cursor: pointer;
   color: #264ae5;
 }
@@ -14462,7 +14470,9 @@ badge widget
 .link-back {
   color: #6c717e;
 }
-.link-back .glyphicon {
+.link-back .glyphicon,
+.link-back .mx-icon-lined,
+.link-back .mx-icon-filled {
   top: 2px;
 }
 
@@ -14843,7 +14853,7 @@ badge widget
   background-color: transparent;
 }
 
-.btn-icon > img, .btn-icon-only > img, .btn-icon > .glyphicon, .btn-icon-only > .glyphicon {
+.btn-icon > img, .btn-icon-only > img, .btn-icon > .glyphicon, .btn-icon-only > .glyphicon, .btn-icon > .mx-icon-lined, .btn-icon-only > .mx-icon-lined, .btn-icon > .mx-icon-filled, .btn-icon-only > .mx-icon-filled {
   margin: 0;
 }
 
@@ -14852,7 +14862,7 @@ badge widget
   flex-direction: row-reverse;
   align-items: center;
 }
-.btn-icon-right > img, .btn-icon-right > .glyphicon {
+.btn-icon-right > img, .btn-icon-right > .glyphicon, .btn-icon-right > .mx-icon-lined, .btn-icon-right > .mx-icon-filled {
   top: 0;
   margin-left: 4px;
 }
@@ -14861,7 +14871,7 @@ badge widget
   padding-right: 0;
   padding-left: 0;
 }
-.btn-icon-top > img, .btn-icon-top > .glyphicon {
+.btn-icon-top > img, .btn-icon-top > .glyphicon, .btn-icon-top > .mx-icon-lined, .btn-icon-top > .mx-icon-filled {
   display: block;
   margin: 0 0 4px 0;
 }
@@ -15373,7 +15383,9 @@ input[type=checkbox] + .control-label {
   transition: all 0.2s;
   text-decoration: none;
 }
-.mx-header .mx-link .glyphicon {
+.mx-header .mx-link .glyphicon,
+.mx-header .mx-link .mx-icon-lined,
+.mx-header .mx-link .mx-icon-filled {
   top: 0;
   font-size: 23px;
 }
@@ -16187,7 +16199,9 @@ img.img-scale-down,
   height: auto;
   margin-right: 0.5em;
 }
-.mx-navbar ul.nav > li.mx-navbar-item > a .glyphicon {
+.mx-navbar ul.nav > li.mx-navbar-item > a .glyphicon,
+.mx-navbar ul.nav > li.mx-navbar-item > a .mx-icon-lined,
+.mx-navbar ul.nav > li.mx-navbar-item > a .mx-icon-filled {
   top: 0;
   margin-right: 0.5em;
   vertical-align: middle;
@@ -16285,7 +16299,9 @@ img.img-scale-down,
 .region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a .mx-navbar-submenu::before {
   border-color: transparent transparent #ced0d3 transparent;
 }
-.region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a .glyphicon {
+.region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a .glyphicon,
+.region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a .mx-icon-lined,
+.region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a .mx-icon-filled {
   font-size: 1.2em;
 }
 .region-topbar .mx-navbar ul.nav > .mx-navbar-item > a:hover, .region-topbar .mx-navbar ul.nav > .mx-navbar-item > a:focus, .region-topbar .mx-navbar ul.nav > .mx-navbar-item.active a, .region-topbar .mx-navbar ul.nav > .mx-navbar-item.open > a, .region-topbar .mx-navbar ul.nav > .mx-navbar-item.open > a:hover, .region-topbar .mx-navbar ul.nav > .mx-navbar-item.open > a:focus {
@@ -16373,7 +16389,9 @@ img.img-scale-down,
 .region-sidebar .mx-navbar ul.nav > li.mx-navbar-item > a .mx-navbar-submenu::before {
   border-color: transparent transparent #171946 transparent;
 }
-.region-sidebar .mx-navbar ul.nav > li.mx-navbar-item > a .glyphicon {
+.region-sidebar .mx-navbar ul.nav > li.mx-navbar-item > a .glyphicon,
+.region-sidebar .mx-navbar ul.nav > li.mx-navbar-item > a .mx-icon-lined,
+.region-sidebar .mx-navbar ul.nav > li.mx-navbar-item > a .mx-icon-filled {
   font-size: 20px;
 }
 .region-sidebar .mx-navbar ul.nav > .mx-navbar-item > a:hover, .region-sidebar .mx-navbar ul.nav > .mx-navbar-item > a:focus, .region-sidebar .mx-navbar ul.nav > .mx-navbar-item.active a, .region-sidebar .mx-navbar ul.nav > .mx-navbar-item.open > a, .region-sidebar .mx-navbar ul.nav > .mx-navbar-item.open > a:hover, .region-sidebar .mx-navbar ul.nav > .mx-navbar-item.open > a:focus {
@@ -16410,7 +16428,9 @@ img.img-scale-down,
   }
 }
 
-.hide-icons.mx-navbar .glyphicon {
+.hide-icons.mx-navbar .glyphicon,
+.hide-icons.mx-navbar .mx-icon-lined,
+.hide-icons.mx-navbar .mx-icon-filled {
   display: none;
 }
 
@@ -16482,7 +16502,9 @@ img.img-scale-down,
   height: auto;
   margin-right: 0.5em;
 }
-.mx-navigationtree .navbar-inner > ul > li > a .glyphicon {
+.mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   top: 0;
   margin-right: 0.5em;
   vertical-align: middle;
@@ -16526,7 +16548,9 @@ img.img-scale-down,
   font-size: 12px;
   font-weight: normal;
 }
-.mx-navigationtree li.mx-navigationtree-has-items > ul li a .glyphicon {
+.mx-navigationtree li.mx-navigationtree-has-items > ul li a .glyphicon,
+.mx-navigationtree li.mx-navigationtree-has-items > ul li a .mx-icon-lined,
+.mx-navigationtree li.mx-navigationtree-has-items > ul li a .mx-icon-filled {
   margin-right: 8px;
 }
 .mx-navigationtree li.mx-navigationtree-has-items > ul li a:hover, .mx-navigationtree li.mx-navigationtree-has-items > ul li a:focus, .mx-navigationtree li.mx-navigationtree-has-items > ul li a.active {
@@ -16563,7 +16587,9 @@ img.img-scale-down,
   border-top-color: #fff;
   border-bottom-color: #fff;
 }
-.region-topbar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon {
+.region-topbar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.region-topbar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.region-topbar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   font-size: 1.2em;
 }
 .region-topbar .mx-navigationtree .navbar-inner > ul > li a:hover,
@@ -16657,7 +16683,9 @@ img.img-scale-down,
   flex-direction: column;
   justify-content: center;
 }
-.nav-content-center-text-icons.mx-navigationtree .navbar-inner ul a .glyphicon {
+.nav-content-center-text-icons.mx-navigationtree .navbar-inner ul a .glyphicon,
+.nav-content-center-text-icons.mx-navigationtree .navbar-inner ul a .mx-icon-lined,
+.nav-content-center-text-icons.mx-navigationtree .navbar-inner ul a .mx-icon-filled {
   margin: 0 0 5px 0;
 }
 
@@ -16665,7 +16693,9 @@ img.img-scale-down,
   justify-content: center;
 }
 
-.hide-icons.mx-navigationtree .glyphicon {
+.hide-icons.mx-navigationtree .glyphicon,
+.hide-icons.mx-navigationtree .mx-icon-lined,
+.hide-icons.mx-navigationtree .mx-icon-filled {
   display: none;
 }
 
@@ -16797,7 +16827,9 @@ img.img-scale-down,
 .mx-menubar ul.mx-menubar-list li.mx-menubar-item > a img {
   margin-right: 0.5em;
 }
-.mx-menubar ul.mx-menubar-list li.mx-menubar-item > a .glyphicon {
+.mx-menubar ul.mx-menubar-list li.mx-menubar-item > a .glyphicon,
+.mx-menubar ul.mx-menubar-list li.mx-menubar-item > a .mx-icon-lined,
+.mx-menubar ul.mx-menubar-list li.mx-menubar-item > a .mx-icon-filled {
   top: -1px;
   margin-right: 0.5em;
   vertical-align: middle;
@@ -16864,7 +16896,9 @@ img.img-scale-down,
   color: #fff;
   font-size: 14px;
 }
-.region-topbar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .glyphicon {
+.region-topbar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .glyphicon,
+.region-topbar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .mx-icon-lined,
+.region-topbar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .mx-icon-filled {
   font-size: 1.2em;
 }
 .region-topbar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a:hover,
@@ -16891,7 +16925,9 @@ img.img-scale-down,
   color: #fff;
   font-size: 14px;
 }
-.region-sidebar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .glyphicon {
+.region-sidebar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .glyphicon,
+.region-sidebar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .mx-icon-lined,
+.region-sidebar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a .mx-icon-filled {
   font-size: 20px;
 }
 .region-sidebar .mx-menubar ul.mx-menubar-list li.mx-menubar-item a:hover,
@@ -16930,7 +16966,9 @@ img.img-scale-down,
   line-height: normal;
   font-size: 12px;
 }
-.bottom-nav-text-icons.mx-menubar ul.mx-menubar-list li.mx-menubar-item a .glyphicon {
+.bottom-nav-text-icons.mx-menubar ul.mx-menubar-list li.mx-menubar-item a .glyphicon,
+.bottom-nav-text-icons.mx-menubar ul.mx-menubar-list li.mx-menubar-item a .mx-icon-lined,
+.bottom-nav-text-icons.mx-menubar ul.mx-menubar-list li.mx-menubar-item a .mx-icon-filled {
   display: block;
   margin: 0 0 4px 0;
   font-size: 18px;
@@ -16941,7 +16979,9 @@ img.img-scale-down,
   margin: 0 0 4px 0;
 }
 
-.hide-icons.mx-menubar .glyphicon {
+.hide-icons.mx-menubar .glyphicon,
+.hide-icons.mx-menubar .mx-icon-lined,
+.hide-icons.mx-menubar .mx-icon-filled {
   display: none;
 }
 
@@ -19645,7 +19685,9 @@ h6,
   align-items: center;
   transform: translateX(-50%);
 }
-.widget-timeline-icon-wrapper .glyphicon {
+.widget-timeline-icon-wrapper .glyphicon,
+.widget-timeline-icon-wrapper .mx-icon-lined,
+.widget-timeline-icon-wrapper .mx-icon-filled {
   font-size: 18px;
 }
 .widget-timeline-icon-wrapper img {
@@ -20162,7 +20204,9 @@ h6,
 .mx-barcode-scanner .close-button {
   color: white;
 }
-.mx-barcode-scanner .close-button .glyphicon {
+.mx-barcode-scanner .close-button .glyphicon,
+.mx-barcode-scanner .close-button .mx-icon-lined,
+.mx-barcode-scanner .close-button .mx-icon-filled {
   font-size: 16px;
 }
 .mx-barcode-scanner .video-canvas .canvas-background {
@@ -21015,8 +21059,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 
    The core stucture of all atlas layouts
 ========================================================================== */
-.layout-atlas .toggle-btn > img,
-.layout-atlas .toggle-btn > .glyphicon {
+.layout-atlas .toggle-btn > img, .layout-atlas .toggle-btn > .glyphicon, .layout-atlas .toggle-btn > .mx-icon-lined, .layout-atlas .toggle-btn > .mx-icon-filled {
   margin: 0;
 }
 .layout-atlas .toggle-btn > .mx-icon-lined {
@@ -21041,7 +21084,9 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
   padding: 16px;
 }
-.layout-atlas .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon {
+.layout-atlas .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.layout-atlas .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.layout-atlas .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   margin-right: 8px;
 }
 .layout-atlas .region-sidebar .sidebar-heading {
@@ -21123,7 +21168,9 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas-phone .region-topbar::before {
   display: none;
 }
-.layout-atlas-phone .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon {
+.layout-atlas-phone .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.layout-atlas-phone .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.layout-atlas-phone .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   margin-right: 16px;
 }
 
@@ -21141,20 +21188,20 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar {
     width: 52px !important;
   }
-  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items a,
-.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items a,
-.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items a,
-.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items a,
-.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items a,
-.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items a {
+  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items a,
+.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items a,
+.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items a,
+.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items a,
+.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items a,
+.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items a {
     white-space: nowrap;
   }
-  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul {
+  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul {
     position: absolute;
     z-index: 100;
     top: 0;
@@ -21164,25 +21211,25 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
     min-width: auto;
     padding: 8px 0;
   }
-  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul {
+  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul {
     left: 100%;
   }
-  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-collapsed ul, .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items ul,
-.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
-.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items ul,
-.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
-.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
-.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree ul li.mx-navigationtree-has-items ul {
+  .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-collapsed ul, .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items ul,
+.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
+.layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items ul,
+.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
+.layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-collapsed ul,
+.layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items ul {
     display: none;
   }
   .layout-atlas-responsive .widget-sidebar:not(.widget-sidebar-expanded) .mx-navigationtree ul li.mx-navigationtree-has-items:hover ul,
@@ -21260,19 +21307,19 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   color: #fff;
   font-weight: bold;
 }
-.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a,
-.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a {
+.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a,
+.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a {
   height: 52px;
   padding: 8px 0;
   white-space: nowrap;
   overflow: hidden;
 }
-.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
-.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
-.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled,
-.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
-.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
-.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper > .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
+.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.layout-atlas-responsive .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled,
+.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.layout-atlas-responsive-default .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21329,7 +21376,9 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas-tablet .region-topbar::before {
   display: none;
 }
-.layout-atlas-tablet .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon {
+.layout-atlas-tablet .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .glyphicon,
+.layout-atlas-tablet .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-lined,
+.layout-atlas-tablet .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a .mx-icon-filled {
   margin-right: 16px;
 }
 
