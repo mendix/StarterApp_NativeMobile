@@ -3282,6 +3282,9 @@
 			<file path="themesource\atlas_core\web\core\widgets\_radio-button.scss"/>
 			<file path="themesource\atlas_core\web\core\widgets\_range-slider.scss"/>
 			<file path="themesource\atlas_core\web\core\widgets\_rating.scss"/>
+			<file path="themesource\atlas_core\web\core\widgets\_scroll-container-dojo.scss"/>
+			<file path="themesource\atlas_core\web\core\widgets\_scroll-container-react.scss"/>
+			<file path="themesource\atlas_core\web\core\widgets\_scroll-container.scss"/>
 			<file path="themesource\atlas_core\web\core\widgets\_simple-menu-bar.scss"/>
 			<file path="themesource\atlas_core\web\core\widgets\_slider.scss"/>
 			<file path="themesource\atlas_core\web\core\widgets\_switch.scss"/>
