@@ -11422,7 +11422,6 @@ div.dijitTabDisabled,
 /* Global Bootstrap changes */
 /* Client defaults and helpers */
 .mx-dataview-content,
-.mx-scrollcontainer-wrapper:not(.mx-scrollcontainer-nested),
 .mx-tabcontainer-content,
 .mx-grid-content {
   -webkit-overflow-scrolling: touch;
@@ -11430,11 +11429,13 @@ div.dijitTabDisabled,
 
 html,
 body,
-#content {
+#content,
+#root {
   height: 100%;
 }
 
-#content > .mx-page {
+#content > .mx-page,
+#root > .mx-page {
   width: 100%;
   min-height: 100%;
 }
@@ -11871,62 +11872,6 @@ input[type=checkbox] {
 .mx-templategrid-item .mx-table th,
 .mx-templategrid-item .mx-table td {
   padding: 2px 8px;
-}
-
-.mx-scrollcontainer-horizontal {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-}
-
-.mx-scrollcontainer-horizontal > div {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.mx-scrollcontainer-nested {
-  padding: 0;
-}
-
-.mx-scrollcontainer-fixed > .mx-scrollcontainer-middle > .mx-scrollcontainer-wrapper,
-.mx-scrollcontainer-fixed > .mx-scrollcontainer-left > .mx-scrollcontainer-wrapper,
-.mx-scrollcontainer-fixed > .mx-scrollcontainer-center > .mx-scrollcontainer-wrapper,
-.mx-scrollcontainer-fixed > .mx-scrollcontainer-right > .mx-scrollcontainer-wrapper {
-  overflow: auto;
-}
-
-.mx-scrollcontainer-move-in {
-  transition: left 250ms ease-out;
-}
-
-.mx-scrollcontainer-move-out {
-  transition: left 250ms ease-in;
-}
-
-.mx-scrollcontainer-shrink .mx-scrollcontainer-toggleable {
-  transition-property: width;
-}
-
-.mx-scrollcontainer-toggleable {
-  background-color: #fff;
-}
-
-.mx-scrollcontainer-push {
-  position: relative;
-}
-
-.mx-scrollcontainer-shrink > .mx-scrollcontainer-toggleable {
-  overflow: hidden;
-}
-
-.mx-scrollcontainer-push.mx-scrollcontainer-open > div,
-.mx-scrollcontainer-slide.mx-scrollcontainer-open > div {
-  pointer-events: none;
-}
-
-.mx-scrollcontainer-push.mx-scrollcontainer-open > .mx-scrollcontainer-toggleable,
-.mx-scrollcontainer-slide.mx-scrollcontainer-open > .mx-scrollcontainer-toggleable {
-  pointer-events: auto;
 }
 
 .mx-navbar-item img,
@@ -14006,35 +13951,6 @@ body[dir=rtl] .mx-master-detail-content-hidden {
   }
 }
 
-.mx-scrollcontainer .mx-placeholder {
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: calc(768px - 1px)) {
-  .mx-scrollcontainer .mx-placeholder .mx-layoutgrid,
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid {
-    padding: 16px 16px 16px 16px;
-  }
-}
-@media (min-width: 768px) {
-  .mx-scrollcontainer .mx-placeholder .mx-layoutgrid,
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid {
-    padding: 24px 24px 24px 24px;
-  }
-}
-@media (min-width: 992px) {
-  .mx-scrollcontainer .mx-placeholder .mx-layoutgrid,
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid {
-    padding: 24px 24px 24px 24px;
-  }
-}
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid .mx-layoutgrid,
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid .mx-layoutgrid-fluid,
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid .mx-layoutgrid,
-.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid .mx-layoutgrid-fluid {
-  padding: 0;
-}
-
 /* ==========================================================================
    Base
 
@@ -14309,7 +14225,7 @@ body {
   color: #6c717c;
 }
 
-.form-control:not([readonly]):focus {
+.form-control:not([readonly]):focus, .form-control:not([readonly]):focus-within {
   border-color: #264ae5;
   outline: 0;
   background-color: #fff;
@@ -16542,6 +16458,10 @@ img.img-scale-down,
   color: #0a1325;
   text-shadow: none;
 }
+.modal-dialog .modal-content .modal-header .close:focus {
+  border-radius: 4px;
+  outline: 2px solid #264ae5;
+}
 .modal-dialog .modal-content .modal-footer {
   display: flex;
   justify-content: flex-end;
@@ -17541,6 +17461,100 @@ input[type=radio]:checked:disabled:after {
 }
 input[type=radio] + label {
   margin-left: 8px;
+}
+
+/* ==========================================================================
+   Scroll Container
+
+   Default Mendix Scroll Container Widget.
+========================================================================== */
+.mx-scrollcontainer-wrapper:not(.mx-scrollcontainer-nested) {
+  -webkit-overflow-scrolling: touch;
+}
+
+.mx-scrollcontainer-horizontal {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.mx-scrollcontainer-horizontal > div {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.mx-scrollcontainer-nested {
+  padding: 0;
+}
+
+.mx-scrollcontainer-fixed > .mx-scrollcontainer-middle > .mx-scrollcontainer-wrapper,
+.mx-scrollcontainer-fixed > .mx-scrollcontainer-left > .mx-scrollcontainer-wrapper,
+.mx-scrollcontainer-fixed > .mx-scrollcontainer-center > .mx-scrollcontainer-wrapper,
+.mx-scrollcontainer-fixed > .mx-scrollcontainer-right > .mx-scrollcontainer-wrapper {
+  overflow: auto;
+}
+
+.mx-scrollcontainer-move-in {
+  transition: left 250ms ease-out;
+}
+
+.mx-scrollcontainer-move-out {
+  transition: left 250ms ease-in;
+}
+
+.mx-scrollcontainer-shrink .mx-scrollcontainer-toggleable {
+  transition-property: width;
+}
+
+.mx-scrollcontainer-toggleable {
+  background-color: #fff;
+}
+
+.mx-scrollcontainer-push {
+  position: relative;
+}
+
+.mx-scrollcontainer-shrink > .mx-scrollcontainer-toggleable {
+  overflow: hidden;
+}
+
+.mx-scrollcontainer-push.mx-scrollcontainer-open > div,
+.mx-scrollcontainer-slide.mx-scrollcontainer-open > div {
+  pointer-events: none;
+}
+
+.mx-scrollcontainer-push.mx-scrollcontainer-open > .mx-scrollcontainer-toggleable,
+.mx-scrollcontainer-slide.mx-scrollcontainer-open > .mx-scrollcontainer-toggleable {
+  pointer-events: auto;
+}
+
+.mx-scrollcontainer .mx-placeholder {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: calc(768px - 1px)) {
+  .mx-scrollcontainer .mx-placeholder .mx-layoutgrid,
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid {
+    padding: 16px 16px 16px 16px;
+  }
+}
+@media (min-width: 768px) {
+  .mx-scrollcontainer .mx-placeholder .mx-layoutgrid,
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid {
+    padding: 24px 24px 24px 24px;
+  }
+}
+@media (min-width: 992px) {
+  .mx-scrollcontainer .mx-placeholder .mx-layoutgrid,
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid {
+    padding: 24px 24px 24px 24px;
+  }
+}
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid .mx-layoutgrid,
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid .mx-layoutgrid-fluid,
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid .mx-layoutgrid,
+.mx-scrollcontainer .mx-placeholder .mx-layoutgrid-fluid .mx-layoutgrid-fluid {
+  padding: 0;
 }
 
 /* ==========================================================================
@@ -21652,6 +21666,10 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
    Extra styling for responsive layouts
 ========================================================================== */
 @media (min-width: 768px) {
+  .layout-atlas-responsive,
+.layout-atlas-responsive-default {
+    --closed-sidebar-width: 52px;
+  }
   .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar,
 .layout-atlas-responsive .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar,
 .layout-atlas-responsive .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar,
