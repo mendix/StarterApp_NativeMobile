@@ -3101,6 +3101,7 @@
 			<file path="theme\native\custom-variables.js"/>
 			<file path="theme\native\exclusion-variables.js"/>
 			<file path="theme\native\main.js"/>
+			<file path="theme\native\toggle-password.js"/>
 			<file path="themesource\administration\native\design-properties.json"/>
 			<file path="themesource\administration\native\main.js"/>
 			<file path="themesource\administration\web\design-properties.json"/>
@@ -3301,6 +3302,7 @@
 			<file path="themesource\atlas_core\web\layouts\_layout-atlas.scss"/>
 			<file path="themesource\atlas_core\web\layouts\_layout-atlas-tablet.scss"/>
 			<file path="themesource\atlas_core\web\main.scss"/>
+			<file path="themesource\atlas_core\web\_variables-css-mappings.scss"/>
 			<file path="themesource\atlas_core\web\_variables.scss"/>
 			<file path="themesource\atlas_nativemobile_content\native\buildingblocks\card.js"/>
 			<file path="themesource\atlas_nativemobile_content\native\buildingblocks\header.js"/>
@@ -3415,10 +3417,6 @@
 			<file path="widgets\com.mendix.widget.native.ToggleButtons.mpk"/>
 			<file path="widgets\com.mendix.widget.native.VideoPlayer.mpk"/>
 			<file path="widgets\com.mendix.widget.native.WebView.mpk"/>
-			<file path="widgets\com.mendix.widget.web.Datagrid.mpk"/>
-			<file path="widgets\com.mendix.widget.web.Image.mpk"/>
-			<file path="widgets\com.mendix.widget.web.LanguageSelector.mpk"/>
-			<file path="widgets\com.mendix.widget.web.Timeline.mpk"/>
 			<file path="widgets\Maps.mpk"/>
 			<file path="widgets\ProgressBar.mpk"/>
 			<file path="widgets\ProgressCircle.mpk"/>
