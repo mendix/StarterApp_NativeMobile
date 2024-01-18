@@ -3417,6 +3417,10 @@
 			<file path="widgets\com.mendix.widget.native.ToggleButtons.mpk"/>
 			<file path="widgets\com.mendix.widget.native.VideoPlayer.mpk"/>
 			<file path="widgets\com.mendix.widget.native.WebView.mpk"/>
+			<file path="widgets\com.mendix.widget.web.Datagrid.mpk"/>
+			<file path="widgets\com.mendix.widget.web.Image.mpk"/>
+			<file path="widgets\com.mendix.widget.web.LanguageSelector.mpk"/>
+			<file path="widgets\com.mendix.widget.web.Timeline.mpk"/>
 			<file path="widgets\Maps.mpk"/>
 			<file path="widgets\ProgressBar.mpk"/>
 			<file path="widgets\ProgressCircle.mpk"/>
