@@ -3296,7 +3296,9 @@
 			<file path="themesource\atlas_core\web\core\widgets\_tooltip.scss"/>
 			<file path="themesource\atlas_core\web\core\widgets\_typography.scss"/>
 			<file path="themesource\atlas_core\web\design-properties.json"/>
+			<file path="themesource\atlas_core\web\_exclusion-variables-defaults.scss"/>
 			<file path="themesource\atlas_core\web\_exclusion-variables.scss"/>
+			<file path="themesource\atlas_core\web\_generated-exclusion-variables.scss"/>
 			<file path="themesource\atlas_core\web\layouts\_layout-atlas-phone.scss"/>
 			<file path="themesource\atlas_core\web\layouts\_layout-atlas-responsive.scss"/>
 			<file path="themesource\atlas_core\web\layouts\_layout-atlas.scss"/>
