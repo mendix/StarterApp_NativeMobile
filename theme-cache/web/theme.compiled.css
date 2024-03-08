@@ -23410,6 +23410,10 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   outline-offset: 0;
 }
 
+.widget-datagrid-content {
+  overflow-y: auto;
+}
+
 /**
     Classes for React Date-Picker font-unit and color adjustments
 */
