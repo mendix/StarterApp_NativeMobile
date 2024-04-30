@@ -3105,7 +3105,6 @@
 			<file path="theme\native\custom-variables.js"/>
 			<file path="theme\native\exclusion-variables.js"/>
 			<file path="theme\native\main.js"/>
-			<file path="theme\native\toggle-password.js"/>
 			<file path="themesource\administration\native\design-properties.json"/>
 			<file path="themesource\administration\native\main.js"/>
 			<file path="themesource\administration\web\design-properties.json"/>
@@ -3363,6 +3362,7 @@
 			<file path="themesource\datawidgets\web\_three-state-checkbox.scss"/>
 			<file path="themesource\datawidgets\web\_tree-node-design-properties.scss"/>
 			<file path="themesource\datawidgets\web\_tree-node.scss"/>
+			<file path="themesource\.DS_Store"/>
 			<file path="themesource\feedbackmodule\native\design-properties.json"/>
 			<file path="themesource\feedbackmodule\native\main.js"/>
 			<file path="themesource\feedbackmodule\settings.json"/>
@@ -3393,6 +3393,7 @@
 			<file path="themesource\nanoflowcommons\.version"/>
 			<file path="themesource\nanoflowcommons\web\design-properties.json"/>
 			<file path="themesource\nanoflowcommons\web\main.scss"/>
+			<file path="themesource\nativemobileresources\.DS_Store"/>
 			<file path="themesource\nativemobileresources\native\design-properties.json"/>
 			<file path="themesource\nativemobileresources\native\main.js"/>
 			<file path="themesource\nativemobileresources\.version"/>
@@ -3463,6 +3464,7 @@
 			<file path="widgets\com.mendix.widget.web.SelectionHelper.mpk"/>
 			<file path="widgets\com.mendix.widget.web.Timeline.mpk"/>
 			<file path="widgets\com.mendix.widget.web.TreeNode.mpk"/>
+			<file path="widgets\.DS_Store"/>
 			<file path="widgets\Maps.mpk"/>
 			<file path="widgets\ProgressBar.mpk"/>
 			<file path="widgets\ProgressCircle.mpk"/>
