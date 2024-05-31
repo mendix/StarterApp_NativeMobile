@@ -176,6 +176,8 @@
 			<file path="javascriptsource\nativemobileresources\actions\CancelScheduledNotification.js"/>
 			<file path="javascriptsource\nativemobileresources\actions\CancelScheduledNotification.json"/>
 			<file path="javascriptsource\nativemobileresources\actions\ChangeStatusBar.js"/>
+			<file path="javascriptsource\nativemobileresources\actions\CheckGenericPermission.js"/>
+			<file path="javascriptsource\nativemobileresources\actions\CheckGenericPermission.json"/>
 			<file path="javascriptsource\nativemobileresources\actions\ClearAllDeliveredNotifications.js"/>
 			<file path="javascriptsource\nativemobileresources\actions\ClearAllDeliveredNotifications.json"/>
 			<file path="javascriptsource\nativemobileresources\actions\dependencies.json"/>
@@ -3029,6 +3031,16 @@
 			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-push-notification\package.json"/>
 			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-push-notification\README.md"/>
 			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-push-notification\trouble-shooting.md"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\lib\commonjs\index.js"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\lib\commonjs\index.js.map"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\lib\module\index.js"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\lib\module\index.js.map"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\lib\typescript\src\index.d.ts"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\lib\typescript\src\index.d.ts.map"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\LICENSE"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\package.json"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\README.md"/>
+			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-schedule-exact-alarm-permission\src\index.tsx"/>
 			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-sound\CHANGELOG.md"/>
 			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-sound\index.d.ts"/>
 			<file path="javascriptsource\nativemobileresources\actions\node_modules\react-native-sound\LICENSE"/>
@@ -3362,7 +3374,6 @@
 			<file path="themesource\datawidgets\web\_three-state-checkbox.scss"/>
 			<file path="themesource\datawidgets\web\_tree-node-design-properties.scss"/>
 			<file path="themesource\datawidgets\web\_tree-node.scss"/>
-			<file path="themesource\.DS_Store"/>
 			<file path="themesource\feedbackmodule\native\design-properties.json"/>
 			<file path="themesource\feedbackmodule\native\main.js"/>
 			<file path="themesource\feedbackmodule\settings.json"/>
@@ -3393,7 +3404,6 @@
 			<file path="themesource\nanoflowcommons\.version"/>
 			<file path="themesource\nanoflowcommons\web\design-properties.json"/>
 			<file path="themesource\nanoflowcommons\web\main.scss"/>
-			<file path="themesource\nativemobileresources\.DS_Store"/>
 			<file path="themesource\nativemobileresources\native\design-properties.json"/>
 			<file path="themesource\nativemobileresources\native\main.js"/>
 			<file path="themesource\nativemobileresources\.version"/>

@@ -16215,6 +16215,7 @@ input[type=checkbox] + .control-label {
   border-radius: 0;
   background-color: transparent;
   /* Buttons */
+  /* Fix for Dojo rendering in react client */
   background-color: inherit;
 }
 .mx-dataview-controls .mx-button {
@@ -16223,6 +16224,9 @@ input[type=checkbox] + .control-label {
 }
 .mx-dataview-controls .mx-button:last-child {
   margin-right: 0;
+}
+.mx-dataview-controls [id^=mxui_widget_Wrapper]:has(> .mx-button) .mx-button {
+  margin-right: 8px;
 }
 
 /* ==========================================================================
@@ -23133,11 +23137,39 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   padding: 16px;
   top: 0;
   min-width: 0;
+  position: relative;
   /* Clickable column header (Sortable) */
   /* Column resizer when column is resizable */
   /* Content of the column header */
   /* Header text */
   /* Header filter */
+}
+.table .th.dragging {
+  opacity: 0.5;
+}
+.table .th.dragging.dragging-over-self {
+  opacity: 0.8;
+}
+.table .th.drop-after:after, .table .th.drop-before:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: rgba(10, 19, 37, 0.8);
+  z-index: 1;
+}
+.table .th.drop-before:after {
+  left: 0;
+}
+.table .th.drop-before:not(:first-child):after {
+  transform: translateX(-50%);
+}
+.table .th.drop-after:after {
+  right: 0;
+}
+.table .th.drop-after:not(:last-child):after {
+  transform: translateX(50%);
 }
 .table .th .clickable {
   cursor: pointer;
@@ -23163,13 +23195,6 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   flex-grow: 1;
   align-self: stretch;
   min-width: 0;
-  padding-left: 4px;
-  margin-left: -4px;
-  /* Styles while dragging another column */
-}
-.table .th .column-container.dragging {
-  border-left: 4px solid rgba(10, 19, 37, 0.8);
-  padding-left: 0;
 }
 .table .th .column-container:not(:has(.filter)) .column-header {
   height: 100%;
@@ -23289,7 +23314,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   border-top-width: 1px;
   border-top-style: solid;
 }
-.table .td:focus {
+.table .td:focus-visible {
   outline-width: 1px;
   outline-style: solid;
   outline-offset: -1px;
