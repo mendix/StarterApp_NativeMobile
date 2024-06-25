@@ -23737,9 +23737,6 @@ Space between the fields and the popup
   max-height: 40vh;
   z-index: 140;
 }
-.dropdown-content-section + .dropdown-content-section {
-  border-top: 1px solid #e7e7e9;
-}
 
 .dropdown-footer {
   position: sticky;

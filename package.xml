@@ -7,6 +7,7 @@
 			<file path="javascriptsource\datawidgets\actions\Export_To_Excel.js"/>
 			<file path="javascriptsource\datawidgets\actions\Reset_All_Filters.js"/>
 			<file path="javascriptsource\datawidgets\actions\Reset_Filter.js"/>
+			<file path="javascriptsource\datawidgets\actions\Set_Filter.js"/>
 			<file path="javascriptsource\datawidgets\actions\xlsx-export-tools.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\Base64Decode.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\Base64DecodeToImage.js"/>
