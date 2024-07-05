@@ -9,6 +9,7 @@
 			<file path="javascriptsource\datawidgets\actions\Reset_Filter.js"/>
 			<file path="javascriptsource\datawidgets\actions\Set_Filter.js"/>
 			<file path="javascriptsource\datawidgets\actions\xlsx-export-tools.js"/>
+			<file path="javascriptsource\.DS_Store"/>
 			<file path="javascriptsource\nanoflowcommons\actions\Base64Decode.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\Base64DecodeToImage.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\Base64Encode.js"/>
@@ -3111,6 +3112,7 @@
 			<file path="javascriptsource\nativemobileresources\actions\TakePicture.js"/>
 			<file path="javascriptsource\nativemobileresources\actions\TakePicture.json"/>
 			<file path="javascriptsource\nativemobileresources\actions\Vibrate.js"/>
+			<file path="javascriptsource\nativemobileresources\.DS_Store"/>
 			<file path="theme-cache\web\img\theme\glyphicons-halflings-regular.woff2"/>
 			<file path="theme-cache\web\img\theme\work-do-more.jpeg"/>
 			<file path="theme-cache\web\theme.compiled.css"/>
@@ -3475,7 +3477,6 @@
 			<file path="widgets\com.mendix.widget.web.SelectionHelper.mpk"/>
 			<file path="widgets\com.mendix.widget.web.Timeline.mpk"/>
 			<file path="widgets\com.mendix.widget.web.TreeNode.mpk"/>
-			<file path="widgets\.DS_Store"/>
 			<file path="widgets\Maps.mpk"/>
 			<file path="widgets\ProgressBar.mpk"/>
 			<file path="widgets\ProgressCircle.mpk"/>
