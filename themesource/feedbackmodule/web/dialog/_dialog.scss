@@ -1,3 +1,4 @@
+@import "../../../../theme/web/custom-variables.scss";
 /// Styles the dialogs.
 /// The styling is shared between the different windows.
 
@@ -5,8 +6,8 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: 50%;
-    top: 50%;
+    left: 50% ;
+    top: 50% ;
     transform: translate(-50%, -50%);
     padding: $spacing-large;
     width: $mxfeedback-dialog-width;

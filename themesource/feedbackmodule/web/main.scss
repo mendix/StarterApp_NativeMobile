@@ -1,7 +1,7 @@
 /* 
     ==| Variables |=========================================================================================
 */
-@import "includes/atlasVariables"; 
+@import "../../../theme/web/custom-variables.scss"; 
 @import "includes/variables";
 @import "includes/helpers";
 
@@ -26,6 +26,7 @@
 @import "dialog/dialog";
 @import "dialog/underlay";
 @import "dialog/closeButton";
+@import "input/input";
 @import "toolbar/toolbar";
 @import "toolbar/toolButton";
 @import "labelGroup";
