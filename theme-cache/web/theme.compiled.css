@@ -16869,11 +16869,12 @@ img.img-scale-down,
   box-shadow: 0px 2px 2px rgba(194, 196, 201, 0.30354);
 }
 .region-topbar .mx-navbar ul.nav > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem a {
-  padding: 8px;
-  color: #fff;
   border-radius: 4px;
-  margin-bottom: 8px;
+  color: #fff;
+  font-size: 12px;
   line-height: 1.2;
+  margin: 0 0 8px;
+  padding: 8px;
 }
 .region-topbar .mx-navbar ul.nav > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem a:hover, .region-topbar .mx-navbar ul.nav > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem a:focus {
   color: #fff;
