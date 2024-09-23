@@ -21851,7 +21851,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul {
     position: absolute;
     z-index: 100;
-    top: 0;
+    top: 48px;
     bottom: 0;
     left: 52px;
     display: block;
@@ -21864,6 +21864,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .layout-atlas-responsive-default .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
 .layout-atlas-responsive-default .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul,
 .layout-atlas-responsive-default .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items:hover > ul > li.mx-navigationtree-has-items:hover > ul {
+    top: 0;
     left: 100%;
   }
   .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-collapsed ul, .layout-atlas-responsive .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar .mx-scrollcontainer-wrapper .mx-navigationtree ul li.mx-navigationtree-has-items ul,
@@ -23130,6 +23131,7 @@ Space between the fields and the popup
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+  position: relative;
 }
 .filter-container .filter-input {
   border-top-left-radius: 0;
@@ -24100,33 +24102,30 @@ input[type=checkbox].three-state-checkbox + .control-label {
     These blocks contains styles directly related to the widget's appearance and are mostly unique styles
     needed to display the widget's UI correctly.
 */
-.mxfeedback-lightbox {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000002;
-}
-.mxfeedback-lightbox__image {
-  margin: auto;
-  display: block;
-  max-width: 70%;
-}
-@media only screen and (min-width: 768px) {
-  .mxfeedback-lightbox__image {
-    max-width: calc(100% - 16px);
-  }
-}
-.mxfeedback-lightbox .mxfeedback-close-button__icon {
-  width: 16px;
-  height: 16px;
-}
+/* 
+About: =========================================================
+----------------------------------------------------------------
+This styling targets the main Feedback Button rendered on your page.
+The Feedback widget button can be rendered on page in 3 formats.
 
+Render Modes: ==================================================
+----------------------------------------------------------------
+Each render mode can be selected by double clicking the Feedback widget settings in Studio Pro.
+
+'Side Tab' - Fixes the button to the right hand margin and rotates by 270 degrees.
+'Button' - Mimics a normal Mendix button.
+'Do not render' - Hides the button on the live website but is still visible in the page editor for developers.
+
+CSS BEM Enumeration values: ====================================
+----------------------------------------------------------------
+At a code level each render mode selected has a coresspoinding CSS BEM modifier value.
+Use these BEM modifiers to custom style each render mode.
+
+Side Tab = "side"
+Button = "normal"
+Do not render = "none"
+
+*/
 .mxfeedback-start-button--none {
   display: none !important;
 }
@@ -24147,14 +24146,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 .mxfeedback-start-button--side:focus, .mxfeedback-start-button--side:hover {
   background-color: #1e3bb7;
-}
-
-.mx-feedback-widget-display-none {
-  display: none !important;
-}
-
-.mx-feedback-widget-modal-body-auto-height {
-  height: auto !important;
 }
 
 .mxfeedback-annotation-canvas {
@@ -24182,115 +24173,11 @@ input[type=checkbox].three-state-checkbox + .control-label {
   z-index: 1000004;
 }
 
-.mxfeedback-failed__message {
-  align-self: center;
-  margin: 8px;
-}
-.mxfeedback-failed__error-image {
-  margin-top: 30px;
-}
-
-.mxfeedback-result__result-image {
-  align-self: center;
-  width: auto;
-  max-width: 50%;
-}
-.mxfeedback-result .mxfeedback-dialog__body-text {
-  margin: auto;
-}
-.mxfeedback-result__result-image {
-  margin-top: 30px;
-}
-
-.mxfeedback-feedback-form__cancel-button {
-  border: 0;
-}
-
 /* 
     ==| Generic blocks |====================================================================================
     These blocks are generic blocks. These styles are styles that apply to the widget's entire UI and
     outline the basic styles of the widget (in accordance with Atlas UI).
 */
-.mxfeedback-dialog {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 24px;
-  width: 560px;
-  max-width: calc(100% - 40px);
-  max-height: calc(100% - 40px);
-  background-color: #fff;
-  border: 1px solid #ced0d3;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden auto;
-  z-index: 1000001;
-}
-.mxfeedback-dialog__title {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 120%;
-  margin: 0 0 16px;
-  color: #0a1325;
-  align-self: center;
-}
-
-.mxfeedback-underlay {
-  inset: 0;
-  z-index: 1000001;
-}
-
-.mxfeedback-close-button {
-  right: 16px;
-  top: 12px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-}
-.mxfeedback-close-button__icon {
-  width: 12px;
-  height: 12px;
-  color: #0a1325;
-  stroke: #0a1325;
-}
-.mxfeedback-close-button--white > .mxfeedback-close-button__icon {
-  fill: #fff;
-}
-
-.mxfeedback-input {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%);
-  width: 560px;
-  max-width: calc(100% - 40px);
-  max-height: calc(100% - 40px);
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden auto;
-  z-index: 1000001;
-}
-.mxfeedback-input .modal-header {
-  border-bottom: unset;
-  margin-top: 1rem;
-  padding-top: 1rem !important;
-  padding-left: 3rem !important;
-}
-.mxfeedback-input .modal-header.modal-header > h4 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 120%;
-  color: #0a1325;
-  align-self: center;
-}
-
 .mxfeedback-toolbar {
   position: fixed;
   display: flex;
@@ -24459,16 +24346,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
   height: 6px;
 }
 
-.mxfeedback-label-group {
-  display: flex;
-  align-items: center;
-  gap: calc(8px / 2);
-  margin-bottom: 4px;
-}
-.mxfeedback-label-group__label.control-label {
-  margin-bottom: 0;
-}
-
 .mxfeedback-button-group {
   display: flex;
   justify-content: flex-end;
@@ -24514,7 +24391,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   display: flex;
   justify-content: left;
   position: relative;
-  margin: 20px auto;
+  margin: 24px auto;
   cursor: pointer;
 }
 .mxfeedback-screenshot-preview__image > img {
@@ -24550,45 +24427,9 @@ input[type=checkbox].three-state-checkbox + .control-label {
   font-size: 12px;
 }
 
-.mxfeedback-tooltip {
-  display: flex;
-  position: relative;
-}
-.mxfeedback-tooltip__icon {
-  width: 16px;
-  height: 16px;
-}
-.mxfeedback-tooltip__icon:hover ~ .mxfeedback-tooltip__tip {
-  visibility: visible;
-}
-.mxfeedback-tooltip__tip {
-  visibility: hidden;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: calc(50% - 32px);
-  width: 240px;
-  max-width: calc(100vw - 32px);
-  padding: 6px 8px;
-  margin-bottom: 0;
-  border-radius: 2px;
-  background-color: #0a1325;
-  color: #fff;
-  font-size: 12px;
-  line-height: 1.5;
-  z-index: 1;
-  transition: visibility 100ms ease-in-out;
-}
-.mxfeedback-tooltip__tip::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 32px;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 12px;
-  height: 12px;
-  background-color: inherit;
-  text-align: center;
-  pointer-events: none;
+.mxfeedback-underlay {
+  inset: 0;
+  z-index: 1000001;
 }
 
 /*# sourceMappingURL=theme.compiled.css.map */
