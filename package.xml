@@ -3458,9 +3458,12 @@
 			<file path="themesource\datawidgets\web\_date-picker.scss"/>
 			<file path="themesource\datawidgets\web\design-properties.json"/>
 			<file path="themesource\datawidgets\web\_drop-down-sort.scss"/>
+			<file path="themesource\datawidgets\web\_export-alert.scss"/>
+			<file path="themesource\datawidgets\web\_export-progress.scss"/>
 			<file path="themesource\datawidgets\web\_gallery-design-properties.scss"/>
 			<file path="themesource\datawidgets\web\_gallery.scss"/>
 			<file path="themesource\datawidgets\web\main.scss"/>
+			<file path="themesource\datawidgets\web\_pseudo-modal.scss"/>
 			<file path="themesource\datawidgets\web\_three-state-checkbox.scss"/>
 			<file path="themesource\datawidgets\web\_tree-node-design-properties.scss"/>
 			<file path="themesource\datawidgets\web\_tree-node.scss"/>

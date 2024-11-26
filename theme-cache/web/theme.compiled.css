@@ -17256,9 +17256,11 @@ img.img-scale-down,
 .popupmenu {
   position: relative;
   display: inline-flex;
+  overflow: visible;
 }
 
 .popupmenu-trigger {
+  position: relative;
   cursor: pointer;
 }
 
@@ -17299,6 +17301,17 @@ img.img-scale-down,
 .popupmenu-menu .popupmenu-custom-item:last-child {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+ul.popupmenu-menu {
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 0;
+  z-index: 1;
+}
+
+.table .td > .popupmenu {
+  overflow: visible;
 }
 
 .popupmenu-basic-divider {
@@ -20570,11 +20583,19 @@ h6,
     display: none  !important;
   }
 }
+.profile-phone .hide-phone {
+  display: none  !important;
+}
+
 @media (min-width: 768px) and (max-width: calc(992px - 1px)) {
   .hide-tablet {
     display: none  !important;
   }
 }
+.profile-tablet .hide-tablet {
+  display: none  !important;
+}
+
 @media (min-width: 992px) {
   .hide-desktop {
     display: none  !important;
