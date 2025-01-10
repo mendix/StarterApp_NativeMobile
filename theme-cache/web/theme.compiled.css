@@ -16614,7 +16614,7 @@ img.img-scale-down,
   color: #0a1325;
   text-shadow: none;
 }
-.modal-dialog .modal-content .modal-header .close:focus {
+.modal-dialog .modal-content .modal-header .close:focus-visible {
   border-radius: 4px;
   outline: 2px solid #264ae5;
 }
@@ -23383,47 +23383,21 @@ Space between the fields and the popup
   padding-left: 4px;
   /* The font has spaces in the right side, so to align in the middle we need this */
 }
-.filter-selector .filter-selector-content .filter-selectors {
+
+.filter-selectors {
   position: absolute;
   width: max-content;
   left: 0;
-  margin: 0 var(--spacing-small, 8px);
   padding: 0;
+  margin: 0;
   background: var(--bg-color-secondary, #fff);
-  z-index: 102;
+  z-index: 51;
   border-radius: 8px;
   list-style-type: none;
   box-shadow: 0 2px 20px 1px rgba(5, 15, 129, 0.05), 0 2px 16px 0 rgba(33, 43, 54, 0.08);
   overflow: hidden;
-  z-index: 102;
 }
-.filter-selector .filter-selector-content .filter-selectors li {
-  display: flex;
-  align-items: center;
-  font-weight: normal;
-  line-height: 32px;
-  cursor: pointer;
-}
-.filter-selector .filter-selector-content .filter-selectors li .filter-label {
-  padding-right: 8px;
-}
-.filter-selector .filter-selector-content .filter-selectors li.filter-selected {
-  background-color: var(--gray-lighter, #f8f8f8);
-  color: var(--brand-primary, #264ae5);
-}
-.filter-selector .filter-selector-content .filter-selectors li:hover, .filter-selector .filter-selector-content .filter-selectors li:focus {
-  background-color: var(--gray-lighter, #f8f8f8);
-}
-
-.filter-selectors {
-  padding: 0;
-  background: var(--bg-color-secondary, #fff);
-  border-radius: 8px;
-  list-style-type: none;
-  box-shadow: 0 2px 20px 1px rgba(5, 15, 129, 0.05), 0 2px 16px 0 rgba(33, 43, 54, 0.08);
-  overflow: hidden;
-  z-index: 102;
-}
+.filter-selectors .filter-listitem,
 .filter-selectors li {
   display: flex;
   align-items: center;
@@ -23431,14 +23405,18 @@ Space between the fields and the popup
   line-height: 32px;
   cursor: pointer;
 }
+.filter-selectors .filter-listitem .filter-label,
 .filter-selectors li .filter-label {
   padding-right: 8px;
 }
+.filter-selectors .filter-listitem.filter-selected,
 .filter-selectors li.filter-selected {
   background-color: var(--gray-lighter, #f8f8f8);
   color: var(--brand-primary, #264ae5);
 }
-.filter-selectors li:hover, .filter-selectors li:focus {
+.filter-selectors .filter-listitem:hover, .filter-selectors .filter-listitem.filter-highlighted,
+.filter-selectors li:hover,
+.filter-selectors li.filter-highlighted {
   background-color: var(--gray-lighter, #f8f8f8);
 }
 
@@ -23750,11 +23728,20 @@ div:not(.table-compact) > .table .th .dropdown-container .dropdown-list {
   border: 0;
 }
 
-.sticky-sentinel.container-stuck + .widget-datagrid-grid .th, .sticky-sentinel.container-stuck + .table .th {
+.container-stuck + .table .th {
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
   z-index: 50;
+}
+
+/**
+ * Another hack for sticky header and filters.
+ * Don't use this code anywhere else, and if you can, please remove it.
+ * If we moved headers out of the grid body, please, remove this piece of guano.
+ */
+.container-stuck + .table .th:has(.filter-selectors.visible) {
+  z-index: 51;
 }
 
 .widget-datagrid-content.infinite-loading {
