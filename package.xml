@@ -3508,8 +3508,8 @@
 			<file path="themesource\datawidgets\public\resources\dropdown-arrow.svg"/>
 			<file path="themesource\datawidgets\.version"/>
 			<file path="themesource\datawidgets\web\_datagrid-design-properties.scss"/>
+			<file path="themesource\datawidgets\web\_datagrid-dropdown-filter.scss"/>
 			<file path="themesource\datawidgets\web\_datagrid-filters.scss"/>
-			<file path="themesource\datawidgets\web\_datagrid-scroll.scss"/>
 			<file path="themesource\datawidgets\web\_datagrid.scss"/>
 			<file path="themesource\datawidgets\web\_date-picker.scss"/>
 			<file path="themesource\datawidgets\web\design-properties.json"/>
