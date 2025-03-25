@@ -3544,6 +3544,7 @@
 			<file path="themesource\nanoflowcommons\.version"/>
 			<file path="themesource\nanoflowcommons\web\design-properties.json"/>
 			<file path="themesource\nanoflowcommons\web\main.scss"/>
+			<file path="themesource\nativemobileresources\.DS_Store"/>
 			<file path="themesource\nativemobileresources\native\design-properties.json"/>
 			<file path="themesource\nativemobileresources\native\main.js"/>
 			<file path="themesource\nativemobileresources\.version"/>
