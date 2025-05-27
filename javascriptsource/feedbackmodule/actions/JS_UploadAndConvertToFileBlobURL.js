@@ -7,6 +7,7 @@
 // Other code you write will be lost the next time you deploy the project.
 import { Big } from "big.js";
 import "mx-global";
+import { showProgress, hideProgress } from "mx-api/ui";
 
 // BEGIN EXTRA CODE
     var isUploading = false;
@@ -16,22 +17,23 @@ import "mx-global";
     };
 
     function removeDomElements({fileInput, progressId}) {
-        if(progressId) mx.ui.hideProgress(progressId); 
+        console.log("progressId", progressId);
+        if(progressId) hideProgress({progressId}); 
         if(fileInput) document.body.removeChild(fileInput);
         isUploading = false;    
-    }
+    };
 
     function validateFileTypes ({acceptedTypes, fileType}) {
         if(!acceptedTypes && !fileType) return false;
         const accepted = acceptedTypes.split(",");
         return accepted.some(type => new RegExp(type).test(fileType));
-    }
+    };
 
     function validateFileSize ({uploadedFile, maxSize}) {
         if(!uploadedFile && !maxSize) return false;
         const uploadedSize = uploadedFile.size / 1024 / 1024; // Convert to MB
         return uploadedSize < (maxSize.c[0] + 0.1); // 0.1 MB extra tolerance
-    }
+    };
 // END EXTRA CODE
 
 /**
@@ -57,7 +59,7 @@ import "mx-global";
 export async function JS_UploadAndConvertToFileBlobURL(userDefined_mimeTypes, userDefined_fileUploadSize) {
 	// BEGIN USER CODE
     return new Promise((resolve, reject) => {
-        try {
+        try {
             // Create and append the HTML input element to the body
             const fileInput = document.createElement("input");
             fileInput.style.position = "absolute";
@@ -77,37 +79,35 @@ export async function JS_UploadAndConvertToFileBlobURL(userDefined_mimeTypes, us
             // A function used to validate & store the uploaded file to local memory.
             function handleFileUpload(event) {
                 isUploading = true;
-  
+
                 const newFile = event.target.files[0];
-                const progressId = mx.ui.showProgress(null, true);
+                const progressId = showProgress();
 
                 // Check if the uploaded file type matches the user defined accepted types.
                 if (!validateFileTypes({acceptedTypes: fileInput.accept, fileType: newFile.type})) {
                     removeDomElements({fileInput, progressId});
-                    resolve("fileTypeNotAccepted");
-                    return;
+                    return resolve("fileTypeNotAccepted");
+                    
                 }
                 // Check if the uploaded file matches the user defined upload size.
                 if (!validateFileSize({uploadedFile: newFile, maxSize: userDefined_fileUploadSize})) { 
                     removeDomElements({fileInput, progressId});
-                    resolve("fileSizeNotAccepted");
-                    return;
+                    return resolve("fileSizeNotAccepted");
                 }
                 // Store file locally on users device and return path to resource.
                 storeFileAndGetResourceUrl(newFile).then((fileBlobURL) => {
                     if(fileBlobURL && typeof fileBlobURL === "string") {
                         removeDomElements({fileInput, progressId});
-                        resolve(fileBlobURL);
+                        return resolve(fileBlobURL);
                     } else {
                         removeDomElements({fileInput, progressId});
-                        resolve("fileNotConverted");
+                        return resolve("fileNotConverted");
                     }
-                })
-                return;
+                });
             };
         } catch (error) {
             reject(error);
-        }
+        };
     });
 	// END USER CODE
 }
