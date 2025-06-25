@@ -1,17 +1,5 @@
 @charset "UTF-8";
 @import url("resources/fonts/open-sans/open-sans.css");
-.mx-administration-lv-dg-list.mx-listview > ul {
-  margin: 0;
-}
-.mx-administration-lv-dg-list .mx-listview-empty {
-  display: none;
-}
-.mx-administration-lv-dg-list .mx-button.mx-listview-loadMore {
-  text-align: left;
-  width: auto;
-  margin: 8px 0 0 0;
-}
-
 :root {
   /*
    DISCLAIMER:
@@ -14493,7 +14481,6 @@ textarea.form-control {
 .form-group .control-label {
   overflow: hidden;
   margin-bottom: 4px;
-  text-align: left;
   text-overflow: ellipsis;
   color: #0a1325;
   font-size: 14px;
@@ -17755,14 +17742,8 @@ input[type=radio] + label {
   overflow-x: clip;
 }
 
-.mx-scrollcontainer-wrapper {
-  height: 100%;
-}
 .mx-scrollcontainer-wrapper:not(.mx-scrollcontainer-nested) {
   -webkit-overflow-scrolling: touch;
-}
-.mx-scrollcontainer-wrapper > .mx-placeholder {
-  height: 100%;
 }
 
 .mx-scrollcontainer-push.mx-scrollcontainer-open > div,
@@ -17798,6 +17779,24 @@ input[type=radio] + label {
 .mx-scrollcontainer-center .mx-layoutgrid-fluid .mx-layoutgrid,
 .mx-scrollcontainer-center .mx-layoutgrid-fluid .mx-layoutgrid-fluid {
   padding: 0;
+}
+
+.region-content {
+  display: flex;
+  flex-direction: column;
+}
+.region-content > .mx-scrollcontainer-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.region-content > .mx-scrollcontainer-wrapper > .mx-placeholder {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.region-content > .mx-scrollcontainer-wrapper > .mx-placeholder > *:only-child {
+  flex-grow: 1;
 }
 
 /* ==========================================================================
@@ -24415,6 +24414,9 @@ input[type=checkbox].three-state-checkbox {
   -webkit-appearance: none;
   transform: translateZ(0);
 }
+input[type=checkbox].three-state-checkbox:disabled {
+  cursor: initial;
+}
 input[type=checkbox].three-state-checkbox:before, input[type=checkbox].three-state-checkbox:after {
   position: absolute;
   display: block;
@@ -24462,11 +24464,11 @@ input[type=checkbox].three-state-checkbox:indeterminate:after, input[type=checkb
 input[type=checkbox].three-state-checkbox:disabled:before {
   background-color: #f8f8f8;
 }
-input[type=checkbox].three-state-checkbox:checked:disabled:before {
+input[type=checkbox].three-state-checkbox:indeterminate:disabled:before, input[type=checkbox].three-state-checkbox:checked:disabled:before {
   border-color: transparent;
   background-color: rgba(38, 74, 229, 0.4);
 }
-input[type=checkbox].three-state-checkbox:disabled:after, input[type=checkbox].three-state-checkbox:checked:disabled:after {
+input[type=checkbox].three-state-checkbox:disabled:after {
   border-color: #f8f8f8;
 }
 input[type=checkbox].three-state-checkbox + .control-label {
