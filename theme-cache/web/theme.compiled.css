@@ -11633,14 +11633,8 @@ input[type=checkbox] {
   padding-right: 15px;
 }
 
-.mx-radiobuttons.inline .radio {
-  display: inline-block;
-  margin-right: 20px;
-}
-
 .mx-radiobuttons .radio input[type=radio] {
   /* Reset bootstrap rules */
-  position: static;
   margin-right: 8px;
   margin-left: 0;
 }
@@ -17576,7 +17570,7 @@ ul.popupmenu-menu {
 }
 
 .radio {
-  display: flex !important;
+  display: flex;
   align-items: center;
   margin-top: 0;
 }
@@ -17584,6 +17578,7 @@ ul.popupmenu-menu {
 input[type=radio] {
   position: relative !important;
   width: 16px;
+  flex: 0 0 16px;
   height: 16px;
   margin: 0;
   cursor: pointer;
@@ -19844,6 +19839,35 @@ h6,
     transform: translate3d(200%, 0, 0);
   }
 }
+/* ==========================================================================
+   Combobox
+
+   Combobox input field inside form-group with hide-bg class
+========================================================================== */
+.hide-bg.form-group .widget-combobox .widget-combobox-input-container {
+  background-color: transparent;
+  border: unset;
+  outline: transparent;
+}
+.hide-bg.form-group .widget-combobox .widget-combobox-input-container input {
+  background-color: transparent;
+}
+.hide-bg.form-group .widget-combobox .form-control:hover:not(:focus):not([disabled]) {
+  border-color: transparent;
+  background-color: transparent;
+}
+.hide-bg.form-group .widget-combobox .widget-combobox-icon-container svg {
+  fill: var(--cb-text-color);
+}
+
+.language-selector {
+  --font-color-contrast: #fff;
+  margin-bottom: 0;
+}
+.language-selector .widget-combobox .widget-combobox-input-container:not(.widget-combobox-input-container-active) .widget-combobox-input {
+  width: inherit;
+}
+
 /* ==========================================================================
    Progress bar
 
@@ -23066,6 +23090,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 }
 .table .td > .td-custom-content {
   flex-grow: 1;
+  min-width: 0;
 }
 .table .td > .empty-placeholder {
   width: 100%;
@@ -23177,17 +23202,14 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   min-width: fit-content;
   margin-bottom: 0;
 }
+.widget-datagrid-grid.table.infinite-loading {
+  min-width: 0;
+}
 .widget-datagrid-top-bar {
   container: widget-datagrid-header/inline-size;
 }
 .widget-datagrid-content {
   overflow-x: auto;
-}
-.widget-datagrid-grid-head {
-  display: contents;
-}
-.widget-datagrid-grid-body {
-  display: contents;
 }
 .widget-datagrid-footer {
   container: widget-datagrid-footer/inline-size;
@@ -23292,15 +23314,41 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   margin: var(--spacing-small, 8px) 0;
 }
 
-.infinite-loading.widget-datagrid-grid-body {
+.infinite-loading .widget-datagrid-grid-head {
+  width: calc(var(--widgets-grid-width) - var(--widgets-grid-scrollbar-size));
+  overflow-x: hidden;
+}
+.infinite-loading .widget-datagrid-grid-head[data-scrolled-y=true] {
+  box-shadow: 0 5px 5px -5px gray;
+}
+.infinite-loading .widget-datagrid-grid-body {
+  width: var(--widgets-grid-width);
   overflow-y: auto;
+  max-height: var(--widgets-grid-body-height);
+}
+.infinite-loading .widget-datagrid-grid-head[data-scrolled-x=true]:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 5px 0 5px -5px gray;
+  top: 0;
+  bottom: 0;
 }
 
-.widget-datagrid-grid-head,
+.widget-datagrid-grid-head {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: var(--widgets-grid-template-columns-head, var(--widgets-grid-template-columns));
+}
+
 .widget-datagrid-grid-body {
   display: grid;
-  grid-template-columns: subgrid;
-  grid-column: 1/-1;
+  grid-template-columns: var(--widgets-grid-template-columns);
+}
+
+.grid-mock-header {
+  display: contents;
 }
 
 :where(.widget-datagrid-paging-bottom, .widget-datagrid-padding-top) {
@@ -23447,7 +23495,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .react-datepicker__day--in-range:hover {
   border-radius: 50%;
   color: var(--brand-primary, #264ae5);
-  background-color: var(--gray-ligter, #f8f8f8);
+  background-color: var(--gray-lighter, #f8f8f8);
 }
 
 .react-datepicker__day-name {
@@ -23462,7 +23510,7 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .react-datepicker__day--today:not(.react-datepicker__day--in-range),
 .react-datepicker__day--keyboard-selected {
   color: var(--brand-primary, #264ae5);
-  background-color: var(--gray-ligter, #f8f8f8);
+  background-color: var(--gray-lighter, #f8f8f8);
 }
 
 .react-datepicker__month-select:focus-visible,
@@ -23556,11 +23604,11 @@ Space between the fields and the popup
   position: relative;
 }
 .filter-container .filter-input {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
 }
 .filter-container .btn-calendar {
-  margin-left: 5px;
+  margin-inline-start: 5px;
 }
 .filter-container .btn-calendar .button-icon {
   width: 18px;
@@ -23577,16 +23625,16 @@ Space between the fields and the popup
 }
 .filter-selector .filter-selector-content .filter-selector-button {
   padding: 8px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: none;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  border-inline-end: none;
   height: 100%;
 }
 .filter-selector .filter-selector-content .filter-selector-button:before {
   justify-content: center;
   width: 20px;
   height: 20px;
-  padding-left: 4px;
+  padding-inline-start: 4px;
   /* The font has spaces in the right side, so to align in the middle we need this */
 }
 
