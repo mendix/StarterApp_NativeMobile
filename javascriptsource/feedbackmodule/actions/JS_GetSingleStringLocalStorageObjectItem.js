@@ -26,7 +26,7 @@ export async function JS_GetSingleStringLocalStorageObjectItem(localStorageKey, 
     }
 	const localObject = window.localStorage.getItem(localStorageKey);
 	const parsedObject = JSON.parse(localObject);
-	const singleItem = parsedObject?.[objectItemKey] ?? "";
+	const singleItem = parsedObject?.[objectItemKey] ?? null;
 	
 	return Promise.resolve(singleItem);
 	// END USER CODE

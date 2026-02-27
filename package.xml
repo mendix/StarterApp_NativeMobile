@@ -31,6 +31,7 @@
 			<file path="javascriptsource\nanoflowcommons\actions\ClearLocalStorage.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\dependencies.json"/>
 			<file path="javascriptsource\nanoflowcommons\actions\dependencies.txt"/>
+			<file path="javascriptsource\nanoflowcommons\actions\DownloadWebFile.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\DraftEmail.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\FindObjectWithGUID.js"/>
 			<file path="javascriptsource\nanoflowcommons\actions\GenerateUniqueID.js"/>
