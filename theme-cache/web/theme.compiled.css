@@ -23197,8 +23197,12 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
 .widget-datagrid {
   position: relative;
 }
+.widget-datagrid-grid-head, .widget-datagrid-grid-body {
+  display: contents;
+}
 .widget-datagrid-grid.table {
   display: grid !important;
+  grid-template-columns: var(--widgets-grid-template-columns);
   min-width: fit-content;
   margin-bottom: 0;
 }
@@ -23318,67 +23322,41 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   margin: var(--spacing-small, 8px) 0;
 }
 
-.infinite-loading .widget-datagrid-grid-head {
-  width: calc(var(--widgets-grid-width) - var(--widgets-grid-scrollbar-size));
-  overflow-x: hidden;
+.infinite-loading {
+  max-height: var(--widgets-grid-table-height);
+  overflow: auto;
 }
-.infinite-loading .widget-datagrid-grid-head[data-scrolled-x=true], .infinite-loading .widget-datagrid-grid-head[data-scrolled-y=true] {
-  z-index: 1;
+.infinite-loading .widget-datagrid-grid-head .th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.infinite-loading .widget-datagrid-grid-head[data-scrolled-y=true] {
-  box-shadow: 0 5px 5px -5px gray;
+.infinite-loading .widget-datagrid-grid-head .th:has([data-overlay-content]) {
+  z-index: 20;
 }
-.infinite-loading .widget-datagrid-grid-body {
-  width: var(--widgets-grid-width);
-  overflow-y: auto;
-  max-height: var(--widgets-grid-body-height);
+.infinite-loading[data-scrolled-y] .widget-datagrid-grid-head .th:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
 }
-.infinite-loading .widget-datagrid-grid-head[data-scrolled-x=true]:after {
+
+.widget-datagrid-content:has(.widget-datagrid-grid[data-scrolled-x]) {
+  position: relative;
+}
+.widget-datagrid-content:has(.widget-datagrid-grid[data-scrolled-x]):after {
   content: "";
   position: absolute;
   left: 0;
-  width: 10px;
-  box-shadow: inset 5px 0 5px -5px gray;
-  top: 0;
+  z-index: 10;
   bottom: 0;
-}
-
-.widget-datagrid-grid.table {
-  grid-template-columns: var(--widgets-grid-template-columns);
-}
-
-.widget-datagrid-grid-body,
-.widget-datagrid-grid-head {
-  display: contents;
-}
-
-@supports (grid-template-rows: subgrid) {
-  .widget-datagrid-grid.table:not([data-has-scroll-x=true]) {
-    grid-template-columns: var(--widgets-grid-template-columns);
-  }
-  .widget-datagrid-grid.table:not([data-has-scroll-x=true]) .widget-datagrid-grid-body,
-.widget-datagrid-grid.table:not([data-has-scroll-x=true]) .widget-datagrid-grid-head {
-    display: grid;
-    min-width: 0;
-    grid-template-columns: subgrid;
-    grid-column: 1/-1;
-  }
-
-  .widget-datagrid-grid.table[data-has-scroll-x=true] {
-    grid-template-columns: initial;
-  }
-  .widget-datagrid-grid.table[data-has-scroll-x=true] .widget-datagrid-grid-head {
-    display: grid;
-    min-width: 0;
-    grid-template-columns: var(--widgets-grid-template-columns-head, var(--widgets-grid-template-columns));
-  }
-  .widget-datagrid-grid.table[data-has-scroll-x=true] .widget-datagrid-grid-body {
-    display: grid;
-    grid-template-columns: var(--widgets-grid-template-columns);
-  }
-}
-.grid-mock-header {
-  display: contents;
+  top: 0;
+  width: 5px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+  pointer-events: none;
 }
 
 :where(.widget-datagrid-paging-bottom, .widget-datagrid-paging-top) {
@@ -23469,6 +23447,10 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
     justify-content: center;
   }
 }
+.widget-datagrid [data-overlay-content] {
+  z-index: 15;
+}
+
 /**
     Classes for React Date-Picker font-unit and color adjustments
 */
