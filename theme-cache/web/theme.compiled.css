@@ -23313,10 +23313,6 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   width: 16px;
 }
 
-.widget-datagrid .progress-bar {
-  margin: var(--spacing-medium, 16px);
-}
-
 .widget-datagrid .widget-datagrid-load-more {
   display: block !important;
   margin: var(--spacing-small, 8px) 0;
