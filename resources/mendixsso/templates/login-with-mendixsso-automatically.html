@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+
+        // Get current query parameters and hash
+    const searchParams = new URLSearchParams(window.location.search);
+    const hashPart = window.location.hash || '';
+
+    // Get current continuation and prompt values
+    const continuation = searchParams.get('continuation') || '';
+    const prompt = searchParams.get('prompt');
+    searchParams.delete('prompt');
+    searchParams.delete('continuation');
+    // Build the new returnURL
+    const returnURL = continuation + hashPart +'?'+ searchParams.toString();
+
+    // Update the continuation parameter with the encoded returnURL
+    searchParams.set('continuation', encodeURIComponent(returnURL));
+
+
+    // Build final URL
+    let finalURL = '/openid/login?';
+    if (prompt !== null) {
+      finalURL += 'prompt=' + encodeURIComponent(prompt) + '&';
+    }
+    finalURL += searchParams.toString();
+
+    // Redirect
+    window.location.href = finalURL;
+
+    </script>
+    <style>
+        .fullscreenDiv {
+            background-color: #e8e8e8;
+            width: 100%;
+            height: auto;
+            bottom: 0px;
+            top: 0px;
+            left: 0;
+            position: absolute;
+        }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<noscript>
+    <div class='fullscreenDiv'>
+        <div class="center">
+            Your browser does not support JavaScript! You need to enable JavaScript to continue.
+        </div>
+    </div>
+</noscript>
+</body>
+</html>
