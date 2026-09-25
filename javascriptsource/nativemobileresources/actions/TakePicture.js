@@ -33,7 +33,7 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
         return Promise.reject(new Error("Picture quality is set to 'Custom', but no maximum width or height was provided"));
     }
     // V3 dropped the feature of providing an action sheet so users can decide on which action to take, camera or library.
-    const nativeVersionMajor = ((_a = NativeModules === null || NativeModules === void 0 ? void 0 : NativeModules.ImagePickerManager) === null || _a === void 0 ? void 0 : _a.showImagePicker) ? 2 : 4;
+    const nativeVersionMajor = ((_a = NativeModules === null || NativeModules === undefined ? undefined : NativeModules.ImagePickerManager) === null || _a === undefined ? undefined : _a.showImagePicker) ? 2 : 4;
     const RNPermissions = nativeVersionMajor === 4 ? (await import('react-native-permissions')).default : null;
     try {
         const uri = await takePicture();
@@ -73,21 +73,36 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
                     handleImagePickerV4Error(response.errorCode, response.errorMessage);
                     return resolve(undefined);
                 }
-                return resolve((_a = response === null || response === void 0 ? void 0 : response.assets) === null || _a === void 0 ? void 0 : _a[0].uri);
+                return resolve((_a = response === null || response === undefined ? undefined : response.assets) === null || _a === undefined ? undefined : _a[0].uri);
             }))
                 .catch(error => reject(error));
         });
     }
+    async function safeRemove(filePath) {
+        try {
+            await NativeModules.MxFileSystem.remove(filePath);
+        }
+        catch (error) {
+            console.warn(`Failed to remove file at ${filePath}. Error: ${error}`);
+            // ignore error
+        }
+    }
     function storeFile(imageObject, uri) {
         return new Promise((resolve, reject) => {
-            fetch(uri)
-                .then(response => response.blob())
-                .then(blob => {
+            NativeModules.MxFileSystem.read(uri.replace("file://", ""))
+                .then((nativeBlob) => {
+                const blob = new Blob();
+                Object.assign(blob, { data: nativeBlob });
                 // eslint-disable-next-line no-useless-escape
                 const filename = /[^\/]*$/.exec(uri)[0];
                 const filePathWithoutFileScheme = uri.replace("file://", "");
+                // Set nativePayload so the patched FormData.prototype.append in NativeFileBackend
+                // replaces the blob value with { uri, name, type } for online uploads. The patch
+                // reads the third append() argument (fileName) and writes it onto nativePayload.name,
+                // which FormData.getParts() uses as the Content-Disposition filename.
+                blob.nativePayload = { uri: `file://${uri}`, name: filename, type: "*/*" };
                 mx.data.saveDocument(imageObject.getGuid(), filename, {}, blob, async () => {
-                    await NativeModules.MendixNative.fsRemove(filePathWithoutFileScheme);
+                    await safeRemove(filePathWithoutFileScheme);
                     imageObject.set("Name", filename);
                     mx.data.commit({
                         mxobj: imageObject,
@@ -95,7 +110,7 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
                         error: (error) => reject(error)
                     });
                 }, async (error) => {
-                    await NativeModules.MendixNative.fsRemove(filePathWithoutFileScheme);
+                    await safeRemove(filePathWithoutFileScheme);
                     reject(error);
                 });
             })

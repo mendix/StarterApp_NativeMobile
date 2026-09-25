@@ -54,8 +54,8 @@ export async function ScheduleNotification(date, body, title, subtitle, playSoun
     }
     if (actionName || actionGuid) {
         notification.data = {
-            actionName: actionName !== null && actionName !== void 0 ? actionName : "",
-            guid: actionGuid !== null && actionGuid !== void 0 ? actionGuid : ""
+            actionName: actionName !== null && actionName !== undefined ? actionName : "",
+            guid: actionGuid !== null && actionGuid !== undefined ? actionGuid : ""
         };
     }
     async function createNotificationChannelIfNeeded(channelId) {
