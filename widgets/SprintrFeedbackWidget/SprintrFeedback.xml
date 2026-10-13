@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="SprintrFeedbackWidget.SprintrFeedback"
+    pluginWidget="true"
+    needsEntityContext="false"
+    offlineCapable="false"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Feedback</name>
+    <description>Mendix Feedback Widget</description>
+    <studioProCategory>Feedback</studioProCategory>
+    <studioCategory>Feedback</studioCategory>
+    <helpUrl>https://docs.mendix.com/appstore/widgets/mendix-feedback/</helpUrl>
+    <icon>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAolBMVEUAAABUVFRTU1NVVVVVVVVVVVVVVVVQUFBQUFBWVlZYWFhVVVVUVFRUVFRUVFQAn+8Al+wAmOwAmewAl+wAmOwAmewAl+8AmOoAme0AmO0AmOsAle8Al+sAl+sAl+cAn98AmuoAl+oAmOsAj+8Al+oAmewAl+wAme0AlepTU1NQUFBVVVVUVFRTU1NVVVVWVlZVVVVVVVVVVVVVVVVUVFRUVFQ28kzSAAAANnRSTlMAQJDf/8+fIBCPIGCgz08QYJ/P7/9fIJCPj98wgEAgEDBgkBCg789/MFARAUGPzn/v/t6/cL9QdRQ7AAACF0lEQVR4Ae2W5ZqsMAxAs+Ne2DJWbN1d3v/VLikZLPfbZvp7zgqa0zaBfECTEyfOev2BmOFoDG0m08GRTCet+OHgaIZNAxtfwhQqZnjcP5uAkMnc5usMDiwwXhhOCjT0qsNlcbSCLioIz3UU6fNwrXjRcMzqCOcDHTZbHdWEm+4UMOYPgdpFHfadWfwt2JiIYTZyQVzG6yTNAPJ0Wx6aC6GAxjcpVFwamoNIoOzdVzk0uL6yBiUS2Pwl0CGxmZQINnZ8YNg5bASCG5xrDoxrg2K34BoHWuPeWpvWNi0u3Cqn4BInAIgp7q+2CD6agVNwU01Uo6naUh5Dp+CuuCul4uvLektruHMKcJ4K/kuGSXAKogJgsGv+AtESMuBQhW+lSayqD7QvTuINvQj43N1Tc6GRr0RlDOhu29BMEgTbco+ca/ejrMs1XEYtLumMcgrgil781EQV5oHaRAhuQXZ48bMbCtdJfmgTmUCAU6D8ZZfbMExSQO6pTQgE14a1cWrzJhcJILMGLD1B+TCZtK0/UB/fpqrQpfe6yqRQgHNg4PhiAbXxCmrzckFVREJvcXixgMgvb+50EXwXBrxJP+JHDhPIecIPjJGn4Pn56QXjB2MuOOpz8ZUn5KjPxbcJE0zeP8Thn68TVpKzviCu5Ov1jNX07Bv/yz8XuwLi4wcQb0EPR/cX/I7BE1o8eOO/eMJ/8QQu3p8T/wBWZ0KzR9VmlgAAAABJRU5ErkJggg==
+    </icon>
+    <properties>
+        <!-- PROJECT CONFIGURATION -->
+        <propertyGroup caption="Configuration">
+            <propertyGroup caption="Feedback button action">
+                <property key="feedbackButtonAction" type="action" defaultType="CallNanoflow" defaultValue="FeedbackModule.ACT_Open_Feedback_Modal">
+                    <caption>On click action</caption>
+                    <description>The default on-click action is the 'ACT_Open_Feedback_Modal' nanoflow, which opens the Feedback Modal pop-up.</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Project settings">
+                <property key="sprintrapp" type="string" required="true" defaultValue="1">
+                    <caption>App ID</caption>
+                    <description>The App ID is added automatically by Studio Pro. You can find it in the Developer Portal under Your App > Settings > General. By overwriting the App ID you can send Feedback to another app.</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Advanced settings">
+                <property key="showAdvancedSettings" type="boolean" defaultValue="false">
+                    <caption>Show advanced settings</caption>
+                    <description>These options allow you to customize where the widget renders and how screenshots are captured when default behavior doesn't work as expected.&#xA;</description>
+                </property>
+                <property key="targetContainerSelector" type="string" required="true" defaultValue=".mx-scrollcontainer-center">
+                    <caption>Target container selector</caption>
+                    <description>CSS selector for the container where the feedback widget should be rendered. Defaults to '.mx-scrollcontainer-center'.</description>
+                </property>
+                <property key="foreignObjectRendering" type="boolean" defaultValue="false">
+                    <caption>Enable object rendering</caption>
+                    <description>Only enable this when you experience problems with creating screenshots.
+                    &#xA;This will enable the 'foreignObjectRendering' method which helps rendering complex HTML, including styles, SVGs, and embedded elements.&#xA;</description>
+                </property>
+                <property
+                    key="scrollableAreaSelector"
+                    type="string"
+                    required="false"
+                    defaultValue=".mx-scrollcontainer-fixed > .mx-scrollcontainer-middle > .mx-scrollcontainer-wrapper">
+                    <caption>CSS scrollable area</caption>
+                    <description>If your app doesn't use the default scrolling behavior in Studio Pro, the screenshot feature might not work correctly. Add a CSS selector to specify which element on your page scrolls the content.</description>
+                </property>
+            </propertyGroup>   
+            <propertyGroup caption="Visibility">
+                <systemProperty key="Visibility" />
+            </propertyGroup>   
+        </propertyGroup>
+        <!-- Translation -->
+        <propertyGroup caption="Customize button">
+            <propertyGroup caption="Feedback and screenshot button labels">
+                <property key="title_label" type="textTemplate" required="false">
+                    <caption>Feedback</caption>
+                    <description />
+                    <translations>
+                        <translation lang="en_US">Feedback</translation>
+                        <translation lang="en_GB">Feedback</translation>
+                        <translation lang="nl_NL">Feedback</translation>
+                        <translation lang="fr_FR">Feedback</translation>
+                        <translation lang="de_DE">Feedback</translation>
+                        <translation lang="pt_PT">Feedback</translation>
+                        <translation lang="hi_IN">प्रतिक्रिया</translation>
+                        <translation lang="es_ES">Comentarios</translation>
+                        <translation lang="tr_TR">Geri Bildirim</translation>
+                        <translation lang="it_IT">Feedback</translation>
+                    </translations>
+                </property>
+                <property key="feedbackStartButtonAriaLabel" type="textTemplate" required="false">
+                    <caption>Give website feedback</caption>
+                    <description>Web accessible aria label for the feedback start button.</description>
+                    <translations>
+                        <translation lang="en_US">Give website feedback</translation>
+                        <translation lang="en_GB">Give website feedback</translation>
+                        <translation lang="nl_NL">Geef feedback over de website</translation>
+                        <translation lang="fr_FR">Donner un avis sur le site web</translation>
+                        <translation lang="de_DE">Website-Feedback geben</translation>
+                        <translation lang="pt_PT">Dar feedback sobre o site</translation>
+                        <translation lang="hi_IN">फीडबैक डायलॉग खोलें</translation>
+                        <translation lang="es_ES">Dar feedback sobre el sitio web</translation>
+                        <translation lang="tr_TR">Web sitesi geri bildirimi ver</translation>
+                        <translation lang="it_IT">Dai feedback sul sito web</translation>
+                    </translations>
+                </property>
+                <property key="take_screenshot_label" type="textTemplate" required="false">
+                    <caption>Take screenshot</caption>
+                    <description />
+                    <translations>
+                        <translation lang="en_US">Take screenshot</translation>
+                        <translation lang="en_GB">Take screenshot</translation>
+                        <translation lang="nl_NL">Schermopname maken</translation>
+                        <translation lang="fr_FR">Prendre une capture d'écran</translation>
+                        <translation lang="de_DE">Screenshot machen</translation>
+                        <translation lang="pt_PT">Tirar captura de tela</translation>
+                        <translation lang="hi_IN">स्क्रीनशॉट लीजिये</translation>
+                        <translation lang="es_ES">Captura de pantalla</translation>
+                        <translation lang="tr_TR">Ekran Görüntüsü Al</translation>
+                        <translation lang="it_IT">Fai uno screenshot</translation>
+                    </translations>
+                </property>
+                <property key="annotate_label" type="textTemplate" required="false">
+                    <caption>Annotate</caption>
+                    <description />
+                    <translations>
+                        <translation lang="en_US">Annotate</translation>
+                        <translation lang="en_GB">Annotate</translation>
+                        <translation lang="nl_NL">Aantekenen</translation>
+                        <translation lang="fr_FR">Annoter</translation>
+                        <translation lang="de_DE">Kommentieren</translation>
+                        <translation lang="pt_PT">Anotar</translation>
+                        <translation lang="hi_IN">एन्नोटेट</translation>
+                        <translation lang="es_ES">Anotar</translation>
+                        <translation lang="tr_TR">Ayrıntı ekle</translation>
+                        <translation lang="it_IT">Annota</translation>
+                    </translations>
+                </property>
+                <property key="done_label" type="textTemplate" required="false">
+                    <caption>Done</caption>
+                    <description />
+                    <translations>
+                        <translation lang="en_US">Done</translation>
+                        <translation lang="en_GB">Done</translation>
+                        <translation lang="nl_NL">Klaar</translation>
+                        <translation lang="fr_FR">Fait</translation>
+                        <translation lang="de_DE">Fertig</translation>
+                        <translation lang="pt_PT">Feito</translation>
+                        <translation lang="hi_IN">हो गया</translation>
+                        <translation lang="es_ES">Listo</translation>
+                        <translation lang="tr_TR">Tamam</translation>
+                        <translation lang="it_IT">Fatto</translation>
+                    </translations>
+                </property>
+                <property key="cancel_label" type="textTemplate" required="false">
+                    <caption>Cancel</caption>
+                    <description />
+                    <translations>
+                        <translation lang="en_US">Cancel</translation>
+                        <translation lang="en_GB">Cancel</translation>
+                        <translation lang="nl_NL">Annuleren</translation>
+                        <translation lang="fr_FR">Annuler</translation>
+                        <translation lang="de_DE">Abbrechen</translation>
+                        <translation lang="pt_PT">Cancelar</translation>
+                        <translation lang="hi_IN">रद्द करना</translation>
+                        <translation lang="es_ES">Cancelar</translation>
+                        <translation lang="tr_TR">İptal Et</translation>
+                        <translation lang="it_IT">Cancella</translation>
+                    </translations>
+                </property>
+                <property key="clear_label" type="textTemplate" required="false">
+                    <caption>Clear</caption>
+                    <description>These button labels are only used by the Feedback Button, Take Screenshot and Annotation tool.
+                    &#xA;If you would like to edit the button labels for the Feedback modal pop-up, please navigate to Feedback Module &#62; USE_ME &#62; Pages.</description>
+                    <translations>
+                        <translation lang="en_US">Clear</translation>
+                        <translation lang="en_GB">Clear</translation>
+                        <translation lang="nl_NL">Aantekening verwijderen</translation>
+                        <translation lang="fr_FR">Nettoyer</translation>
+                        <translation lang="de_DE">Sauber machen</translation>
+                        <translation lang="pt_PT">Limpar</translation>
+                        <translation lang="hi_IN">स्पष्ट</translation>
+                        <translation lang="es_ES">Borrar</translation>
+                        <translation lang="tr_TR">Temizle</translation>
+                        <translation lang="it_IT">Pulisci</translation>
+                    </translations>
+                </property>
+            </propertyGroup>
+                <propertyGroup caption="Feedback button styling">
+                <property key="userDefinedButtonStyle" type="enumeration" defaultValue="side">
+                    <caption>Render mode</caption>
+                    <description>Choose how the feedback button renders on your apps page.&#xA;If set to 'Do not render', the Feedback Button will not show to users visiting your app.</description>
+                    <enumerationValues>
+                        <enumerationValue key="side">Side tab</enumerationValue>
+                        <enumerationValue key="normal">Button</enumerationValue>
+                        <enumerationValue key="none">Do not render</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <property key="showInDesignMode" type="boolean" defaultValue="true">
+                    <caption>Show in Design mode</caption>
+                    <description>In Mendix Studio Pro you can show or hide the Feedback widget button from the page editor when using Design mode.</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>

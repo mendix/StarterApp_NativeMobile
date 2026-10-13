@@ -1,10 +1,11 @@
+$scroll-shadow: /* Shadow Cover TOP */
+    linear-gradient(white 30%, rgba(255, 255, 255, 0)) center top,
+    /* Shadow Cover BOTTOM */ linear-gradient(rgba(255, 255, 255, 0), white 70%) center bottom,
+    /* Shadow TOP */ linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(197, 197, 197, 0.6)) center top,
+    /* Shadow BOTTOM */ linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(197, 197, 197, 0.6)) center bottom !default;
+
 @mixin scroll-shadow {
-    background:
-        /* Shadow Cover TOP */
-        linear-gradient(white 30%, rgba(255, 255, 255, 0)) center top,
-        /* Shadow Cover BOTTOM */ linear-gradient(rgba(255, 255, 255, 0), white 70%) center bottom,
-        /* Shadow TOP */ linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(197, 197, 197, 0.6)) center top,
-        /* Shadow BOTTOM */ linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(197, 197, 197, 0.6)) center bottom;
+    background: var(--scroll-shadow, $scroll-shadow);
 
     background-repeat: no-repeat;
     background-size:
@@ -20,7 +21,7 @@
         stroke-width: 0;
     }
     &:hover {
-        color: var(--brand-primary, #264ae5);
+        color: var(--brand-primary, $brand-primary);
         path {
             stroke-width: 1px;
         }
@@ -37,13 +38,13 @@ $root: ".widget-dropdown-filter";
     --wdf-popover-z-index: 50;
     --wdf-popover-shadow: 0px 0px var(--wdf-outer-spacing) 0px var(--shadow-color-border, rgba(0, 0, 0, 0.2));
     --wdf-bd-radius: var(--dropdown-border-radius, 7px);
-    --wdf-menu-bg-color: var(--label-info-color, #ffffff);
+    --wdf-menu-bg-color: var(--label-info-color, $color-base);
     --wdf-menu-max-height: var(--dropdown-menu-max-height, 320px);
     --wdf-menu-item-padding: 6px 10px;
-    --wdf-highlighted-bg-color: var(--color-default-light, #f5f6f6);
-    --wdf-selected-bg-color: var(--color-primary-lighter, #e6eaff);
+    --wdf-highlighted-bg-color: var(--color-default-light, $color-default-light);
+    --wdf-selected-bg-color: var(--color-primary-lighter, $color-primary-lighter);
     --wdf-button-spacing: 8px;
-    --wdf-color: var(--gray-dark, black);
+    --wdf-color: var(--font-color-default, $gray-dark);
     --wdf-state-icon-size: 16px;
     --wdf-toggle-width: calc(4px + var(--wdf-state-icon-size) + var(--wdf-button-spacing));
     --wdf-toggle-inline-end: var(--wdf-toggle-width);
@@ -60,6 +61,8 @@ $root: ".widget-dropdown-filter";
         padding-block: var(--wdf-button-spacing);
         padding-inline-end: var(--wdf-button-spacing);
         padding-inline-start: var(--wdf-button-spacing);
+        // Prevents the toggle indicator from visually overflowing the button boundary in narrow columns.
+        overflow: clip;
     }
 
     &-popover {
@@ -106,6 +109,12 @@ $root: ".widget-dropdown-filter";
         }
     }
 
+    &-menu-item-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     &-checkbox-slot {
         display: flex;
         margin-inline-end: var(--wdf-outer-spacing);
@@ -138,7 +147,6 @@ $root: ".widget-dropdown-filter";
     &-clear {
         @include btn-with-cross;
         align-items: center;
-        align-self: center;
         display: flex;
         flex-shrink: 0;
         justify-self: end;
@@ -149,6 +157,11 @@ $root: ".widget-dropdown-filter";
         &:has(+ #{$root}-state-icon),
         &:has(+ #{$root}-toggle) {
             border-inline-end: 1px solid var(--gray, #787d87);
+        }
+
+        &:focus-visible {
+            outline-offset: -2px;
+            outline: var(--brand-primary, $brand-primary) solid 1px;
         }
     }
 
@@ -233,7 +246,7 @@ $root: ".widget-dropdown-filter";
 }
 
 :where(#{$root}.variant-select[data-empty]) {
-    --wdf-input-placeholder-color: rgb(117, 117, 117);
+    --wdf-input-placeholder-color: var(--form-input-placeholder-color, $form-input-placeholder-color);
     #{$root}-toggle {
         color: var(--wdf-input-placeholder-color);
     }
@@ -252,9 +265,9 @@ $root: ".widget-dropdown-filter";
 :where(#{$root}.variant-tag-picker) {
     #{$root}-selected-item {
         align-items: center;
-        background-color: var(--color-primary-lighter, #e6eaff);
+        background-color: var(--color-primary-lighter, $color-primary-lighter);
         border-radius: 26px;
-        color: #000;
+        color: var(--wdf-color);
         display: inline-flex;
         flex-flow: row nowrap;
         font-size: var(--font-size-small, 12px);
@@ -262,8 +275,12 @@ $root: ".widget-dropdown-filter";
         justify-content: center;
         line-height: 1.334;
         padding: var(--wdf-tag-padding);
+        margin: var(--spacing-smallest, 2px);
         &:focus-visible {
-            outline: var(--brand-primary, #264ae5) auto 1px;
+            outline: var(--brand-primary, $brand-primary) auto 1px;
+        }
+        &:focus {
+            background-color: var(--color-primary-light, $color-primary-light);
         }
     }
 
@@ -271,6 +288,14 @@ $root: ".widget-dropdown-filter";
         flex-basis: 0;
         min-width: 50px;
         width: initial;
+    }
+
+    &:not(:focus-within):not([data-empty]) {
+        #{$root}-input {
+            opacity: 0;
+            flex-shrink: 1;
+            min-width: 1px;
+        }
     }
 
     #{$root}-clear {
@@ -300,7 +325,7 @@ $root: ".widget-dropdown-filter";
         }
 
         &:focus-visible {
-            outline: var(--brand-primary, #264ae5) solid 1px;
+            outline: var(--brand-primary, $brand-primary) solid 1px;
             outline-offset: 2px;
         }
     }
