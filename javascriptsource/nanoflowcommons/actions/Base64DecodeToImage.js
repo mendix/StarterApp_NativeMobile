@@ -7,8 +7,6 @@
 // Other code you write will be lost the next time you deploy the project.
 import { Big } from "big.js";
 import { Base64 } from 'js-base64';
-import RNBlobUtil from 'react-native-blob-util';
-import { NativeModules } from 'react-native';
 
 // BEGIN EXTRA CODE
 // END EXTRA CODE
@@ -29,6 +27,8 @@ export async function Base64DecodeToImage(base64, image) {
     // Native platform
     if (navigator && navigator.product === "ReactNative") {
         try {
+            const { NativeFileSystem } = await import('mendix-native');
+            const RNBlobUtil = (await import('react-native-blob-util')).default;
             // Remove data URI prefix if present (e.g., "data:image/png;base64,")
             let cleanBase64 = base64;
             if (base64.includes(",")) {
@@ -49,7 +49,7 @@ export async function Base64DecodeToImage(base64, image) {
             // NativeFileBackend.storeFile calls NativeFileSystem.save(blob.data, path)
             // and blob.close() — a plain object has no .data getter or .close(), which
             // crashes iOS via [NSInvocation invokeWithTarget:].
-            const nativeBlob = await NativeModules.MxFileSystem.read(tempPath.replace("file://", ""));
+            const nativeBlob = await NativeFileSystem.read(tempPath.replace("file://", ""));
             // Normalize: MxFileSystem.read may return 'length' instead of 'size'.
             const blobData = { ...nativeBlob };
             if (blobData.size === undefined && blobData.length !== undefined) {
@@ -65,10 +65,14 @@ export async function Base64DecodeToImage(base64, image) {
             const fileBlob = blob;
             return new Promise((resolve, reject) => {
                 mx.data.saveDocument(image.getGuid(), fileName, {}, fileBlob, () => {
-                    RNBlobUtil.fs.unlink(tempPath).catch(e => console.info("Temp file cleanup failed:", e));
+                    RNBlobUtil.fs
+                        .unlink(tempPath)
+                        .catch((e) => console.info("Temp file cleanup failed:", e));
                     resolve(true);
                 }, error => {
-                    RNBlobUtil.fs.unlink(tempPath).catch(e => console.info("Temp file cleanup failed:", e));
+                    RNBlobUtil.fs
+                        .unlink(tempPath)
+                        .catch((e) => console.info("Temp file cleanup failed:", e));
                     reject(error);
                 });
             });
