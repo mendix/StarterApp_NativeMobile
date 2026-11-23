@@ -6,9 +6,10 @@
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
 // Other code you write will be lost the next time you deploy the project.
 import { Big } from "big.js";
-import { NativeModules, Alert, Platform, Linking } from 'react-native';
+import { NativeFileSystem } from 'mendix-native';
+import { Platform, Alert, Linking } from 'react-native';
 import { launchImageLibrary, launchCamera } from 'react-native-image-picker';
-import { getLocales } from 'react-native-localize';
+import RNPermissions from 'react-native-permissions';
 
 // BEGIN EXTRA CODE
 // END EXTRA CODE
@@ -33,8 +34,7 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
         return Promise.reject(new Error("Picture quality is set to 'Custom', but no maximum width or height was provided"));
     }
     // V3 dropped the feature of providing an action sheet so users can decide on which action to take, camera or library.
-    const nativeVersionMajor = ((_a = NativeModules === null || NativeModules === undefined ? undefined : NativeModules.ImagePickerManager) === null || _a === undefined ? undefined : _a.showImagePicker) ? 2 : 4;
-    const RNPermissions = nativeVersionMajor === 4 ? (await import('react-native-permissions')).default : null;
+    // react-native-image-picker v7.2.3 is always v4+ (no legacy action sheet API)
     try {
         const uri = await takePicture();
         if (!uri) {
@@ -50,25 +50,13 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
     }
     function takePicture() {
         return new Promise((resolve, reject) => {
-            const options = nativeVersionMajor === 2 ? getOptionsV2() : getOptions();
+            const options = getOptions();
             getPictureMethod()
                 .then(method => method(options, (response) => {
                 var _a;
                 if (response.didCancel) {
                     return resolve(undefined);
                 }
-                if (nativeVersionMajor === 2) {
-                    const responseV2 = response;
-                    if (responseV2.error) {
-                        const unhandledError = handleImagePickerV2Error(responseV2.error);
-                        if (!unhandledError) {
-                            return resolve(undefined);
-                        }
-                        return reject(new Error(responseV2.error));
-                    }
-                    return resolve(responseV2.uri);
-                }
-                response = response;
                 if (response.errorCode) {
                     handleImagePickerV4Error(response.errorCode, response.errorMessage);
                     return resolve(undefined);
@@ -80,7 +68,7 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
     }
     async function safeRemove(filePath) {
         try {
-            await NativeModules.MxFileSystem.remove(filePath);
+            await NativeFileSystem.remove(filePath);
         }
         catch (error) {
             console.warn(`Failed to remove file at ${filePath}. Error: ${error}`);
@@ -89,7 +77,7 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
     }
     function storeFile(imageObject, uri) {
         return new Promise((resolve, reject) => {
-            NativeModules.MxFileSystem.read(uri.replace("file://", ""))
+            NativeFileSystem.read(uri.replace("file://", ""))
                 .then((nativeBlob) => {
                 const blob = new Blob();
                 Object.assign(blob, { data: nativeBlob });
@@ -119,7 +107,7 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
     }
     async function getPictureMethod() {
         async function handleCameraRequest() {
-            if (Platform.OS === "android" && nativeVersionMajor === 4) {
+            if (Platform.OS === "android") {
                 await checkAndMaybeRequestAndroidPermission();
             }
             return launchCamera;
@@ -158,36 +146,6 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
                 break;
         }
     }
-    function getOptionsV2() {
-        const { maxWidth, maxHeight } = getPictureQuality();
-        const [language] = getLocales().map(local => local.languageCode);
-        const isDutch = language === "nl";
-        return {
-            mediaType: "photo",
-            maxWidth,
-            maxHeight,
-            noData: true,
-            title: isDutch ? "Foto toevoegen" : "Select a photo",
-            cancelButtonTitle: isDutch ? "Annuleren" : "Cancel",
-            takePhotoButtonTitle: isDutch ? "Foto maken" : "Take photo",
-            chooseFromLibraryButtonTitle: isDutch ? "Kies uit bibliotheek" : "Choose from library",
-            permissionDenied: {
-                title: isDutch
-                    ? "Deze app heeft geen toegang tot uw camera of foto bibliotheek"
-                    : "This app does not have access to your camera or photo library",
-                text: isDutch
-                    ? "Ga naar Instellingen > Privacy om toegang tot uw camera en bestanden te verlenen."
-                    : "To enable access, tap Settings > Privacy and turn on Camera and Photos/Storage.",
-                reTryTitle: isDutch ? "Instellingen" : "Settings",
-                okTitle: isDutch ? "Annuleren" : "Cancel"
-            },
-            storageOptions: {
-                skipBackup: true,
-                cameraRoll: false,
-                privateDirectory: true
-            }
-        };
-    }
     function getOptions() {
         const { maxWidth, maxHeight } = getPictureQuality();
         return {
@@ -220,26 +178,6 @@ export async function TakePicture(picture, pictureSource, pictureQuality, maximu
                     maxWidth: Number(maximumWidth),
                     maxHeight: Number(maximumHeight)
                 };
-        }
-    }
-    function handleImagePickerV2Error(error) {
-        const ERRORS = {
-            AndroidPermissionDenied: "Permissions weren't granted",
-            iOSPhotoLibraryPermissionDenied: "Photo library permissions not granted",
-            iOSCameraPermissionDenied: "Camera permissions not granted"
-        };
-        switch (error) {
-            case ERRORS.iOSPhotoLibraryPermissionDenied:
-                showAlert("This app does not have access to your photo library", "To enable access, tap Settings and turn on Photos.");
-                return;
-            case ERRORS.iOSCameraPermissionDenied:
-                showAlert("This app does not have access to your camera", "To enable access, tap Settings and turn on Camera.");
-                return;
-            case ERRORS.AndroidPermissionDenied:
-                // Ignore this error because the image picker plugin already shows an alert in this case.
-                return;
-            default:
-                return error;
         }
     }
     function showAlert(title, message) {

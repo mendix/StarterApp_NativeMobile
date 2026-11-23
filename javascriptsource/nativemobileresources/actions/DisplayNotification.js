@@ -6,7 +6,7 @@
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
 // Other code you write will be lost the next time you deploy the project.
 import { Big } from "big.js";
-import { NativeModules, Platform } from 'react-native';
+import { Platform } from 'react-native';
 import notifee, { AndroidImportance } from 'react-native-notify-kit';
 
 // BEGIN EXTRA CODE
@@ -30,9 +30,6 @@ export async function DisplayNotification(body, title, subtitle, playSound, acti
         throw new Error("Input parameter 'Body' is required");
     }
     // Documentation Documentation https://github.com/invertase/notifee
-    if (NativeModules && !NativeModules.NotifeeApiModule) {
-        return Promise.reject(new Error("Notifee native module is not available in your app"));
-    }
     const channelId = playSound ? "mendix-local-notifications-withsound" : "mendix-local-notifications";
     await createNotificationChannelIfNeeded(channelId);
     const notification = {
