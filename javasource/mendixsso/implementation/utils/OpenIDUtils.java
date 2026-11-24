@@ -6,9 +6,8 @@ import com.mendix.m2ee.api.IMxRuntimeRequest;
 import com.mendix.m2ee.api.IMxRuntimeResponse;
 import com.mendix.systemwideinterfaces.MendixRuntimeException;
 import com.mendix.systemwideinterfaces.core.ISession;
-import io.netty.handler.codec.http.cookie.CookieHeaderNames;
-import io.netty.handler.codec.http.cookie.DefaultCookie;
-import io.netty.handler.codec.http.cookie.ServerCookieEncoder;
+import mendixsso.implementation.cookie.SameSite;
+import mendixsso.implementation.cookie.SetCookieBuilder;
 import mendixsso.implementation.ConfigurationManager;
 import mendixsso.implementation.ContinuationURLManager;
 import mendixsso.implementation.handlers.OpenIDHandler;
@@ -51,7 +50,6 @@ public final class OpenIDUtils {
     private static final String NONCE_COOKIE_NAME = "MENDIXSSONONCE";
 
     private static final String NONCE_COOKIE_PATH = "/";
-    private static final String NONCE_COOKIE_DOMAIN = "";
     public static final String COOKIE_HOST_PREFIX = "__Host-";
 
 
@@ -224,22 +222,15 @@ public final class OpenIDUtils {
         var isHttps = isHttps(request);
         var cookieName = isHttps ? COOKIE_HOST_PREFIX + NONCE_COOKIE_NAME : NONCE_COOKIE_NAME;
 
-        /*
-        Netty http codec used to encode cookie to string. Here, our intention is building cookie without underlying Core module, Jetty or something.
-        Thus, that give ability of specifying same site policy. Of course, it was possible to write cookie encoder to comply with RFC standard but
-        maintaining is another concern.
-        If Mendix runtime upgrades the Jetty version 12.0 or higher, remove the netty external dependency and replace this with built-in solution.
-         */
-        DefaultCookie nettyCookie = new DefaultCookie(cookieName, nonce);
-        nettyCookie.setHttpOnly(true);
-        nettyCookie.setSecure(isHttps);
-        nettyCookie.setPath(NONCE_COOKIE_PATH);
-        nettyCookie.setSameSite(CookieHeaderNames.SameSite.Lax);
-        nettyCookie.setDomain(NONCE_COOKIE_DOMAIN);
-        nettyCookie.setMaxAge(maxAge);
+        SameSite sameSite = SameSite.valueOfIgnoreCase(Constants.getNonceCookieSameSite());
+        SetCookieBuilder builder = SetCookieBuilder.of(cookieName, nonce)
+                .httpOnly(true)
+                .secure(isHttps || SameSite.None.equals(sameSite))
+                .path(NONCE_COOKIE_PATH)
+                .sameSite(sameSite)
+                .maxAge(maxAge);
 
-        // Use ServerCookieEncoder to format the cookie
-        return ServerCookieEncoder.STRICT.encode(nettyCookie);
+        return builder.build();
     }
 
 
